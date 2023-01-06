@@ -8,7 +8,7 @@ public abstract class SineWaveTransform : ManagedBehaviour
 
     private Vector3 originalMagnitude;
 
-    private void Start()
+    private void Awake()
     {
         originalMagnitude = GetMagnitude();
     }

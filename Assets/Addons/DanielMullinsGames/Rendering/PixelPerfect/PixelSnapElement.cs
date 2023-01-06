@@ -12,6 +12,12 @@ public abstract class PixelSnapElement : MonoBehaviour
 
     protected abstract void SnapToPixelGrid();
 
+    public static Vector3 RoundToPixel(Vector3 value)
+    {
+        Vector2 pxValue = new Vector2(Mathf.RoundToInt(value.x * 100f), Mathf.RoundToInt(value.y * 100f));
+        return pxValue / 100f;
+    }
+
     public void AdjustPosition()
     {
         didRestoreThisFrame = false;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ManagedBehaviour : ManagedBehaviourBase
 {
+    public static ReferenceSetToggle PauseAll = new ReferenceSetToggle();
+
     private bool initialized = false;
 
     public void Initialize()
@@ -15,23 +17,36 @@ public class ManagedBehaviour : ManagedBehaviourBase
         }
     }
 
-    public virtual int ExecutionOrder => 0;
-
     public virtual bool UpdateWhenPaused { get { return false; } }
 
     public virtual void ManagedUpdate() { }
-
     public virtual void ManagedFixedUpdate() { }
-
     public virtual void ManagedLateUpdate() { }
 
     protected virtual void ManagedInitialize() { }
-    protected virtual void ManagedOnEnable() { }
 
-    // Seal default Unity calls so they cannot be accidentally used in child classes.
-    public sealed override void Update() { }
-    public sealed override void FixedUpdate() { }
-    public sealed override void LateUpdate() { }
+    public sealed override void Update() 
+    {
+        if (CanUpdate())
+        {
+            ManagedUpdate();
+        }
+    }
+
+    public sealed override void FixedUpdate() 
+    {
+        if (CanUpdate())
+        {
+            ManagedFixedUpdate();
+        }
+    }
+    public sealed override void LateUpdate()
+    {
+        if (CanUpdate())
+        {
+            ManagedLateUpdate();
+        }
+    }
 
     protected sealed override void Awake()
     {
@@ -42,9 +57,8 @@ public class ManagedBehaviour : ManagedBehaviourBase
         }
     }
 
-    protected sealed override void OnEnable()
+    private bool CanUpdate()
     {
-        FrameLoopManager.Instance.RegisterBehaviour(this);
-        ManagedOnEnable();
+        return UpdateWhenPaused || !PauseAll.True;
     }
 }

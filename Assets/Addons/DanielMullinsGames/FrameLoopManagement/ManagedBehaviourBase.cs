@@ -8,5 +8,4 @@ public class ManagedBehaviourBase : MonoBehaviour
     public virtual void FixedUpdate() { }
     public virtual void LateUpdate() { }
     protected virtual void Awake() { }
-    protected virtual void OnEnable() { }
 }

@@ -7,5 +7,6 @@ public enum Emotion
     Happy,
     Sad,
     Angry,
+    Surprised,
     NUM_EMOTIONS,
 }

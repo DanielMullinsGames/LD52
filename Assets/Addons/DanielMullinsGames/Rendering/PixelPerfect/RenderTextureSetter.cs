@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 public class RenderTextureSetter : MonoBehaviour
 {
+    public List<RenderTexture> RenderTextures => renderTextures;
+    private List<RenderTexture> renderTextures = new List<RenderTexture>();
+
     [SerializeField]
     private List<Camera> pixelSceneCameras = default;
 
@@ -38,6 +41,12 @@ public class RenderTextureSetter : MonoBehaviour
             rect.width = width;
             rect.height = height;
             pixelSceneCamera.pixelRect = rect;
+
+            // Don't add a new RenderTexture to list until it is initialized as the proper dimensions, which seems to take 1 frame.
+            if (!renderTextures.Contains(renderImage.texture as RenderTexture) && renderImage.texture.width == width)
+            {
+                renderTextures.Add(renderImage.texture as RenderTexture);
+            }
         }
 
         prevScreenWidth = width;

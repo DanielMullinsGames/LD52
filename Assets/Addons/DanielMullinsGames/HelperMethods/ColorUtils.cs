@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColorUtils
 {
@@ -14,5 +14,10 @@ public class ColorUtils
     public static string ColorCharacter(char character, Color c)
     {
         return ColorString(character.ToString(), c);
+    }
+
+    public static Color GetColorWithAlpha(Color c, float alpha)
+    {
+        return new Color(c.r, c.g, c.b, alpha);
     }
 }

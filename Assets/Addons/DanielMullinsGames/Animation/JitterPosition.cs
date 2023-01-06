@@ -4,17 +4,20 @@ using System.Collections.Generic;
 
 public class JitterPosition : ManagedBehaviour
 {
+    public bool UnscaledTime { private get; set; }
+
     [SerializeField]
     private bool onlyX = default;
 
     [SerializeField]
     private float jitterSpeed = 5f;
 
-    [SerializeField]
-    private float jitterFrequency = 0.1f;
+    public float jitterFrequency = 0.1f;
 
 	[SerializeField]
 	private bool toFullExtent = false;
+
+	public float amount = 0.05f;
 
     private Vector2 currentJitterValue;
 	private Vector2 intendedJitterValue;
@@ -23,7 +26,6 @@ public class JitterPosition : ManagedBehaviour
 
 	private Vector2 originalPos;
 
-	public float amount = 0.05f;
 
 	void Start()
 	{
@@ -32,14 +34,17 @@ public class JitterPosition : ManagedBehaviour
 
     public override void ManagedUpdate()
     {
-		jitterTimer += Time.deltaTime;
+        FloorSubpixelAmount();
+
+        float timeStep = UnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+        jitterTimer += timeStep;
 		if (jitterTimer > jitterFrequency)
 		{
 			SetNewIntendedValue();
 			jitterTimer = 0f;
 		}
 
-		currentJitterValue = Vector2.Lerp(currentJitterValue, intendedJitterValue, Time.deltaTime * jitterSpeed);
+		currentJitterValue = Vector2.Lerp(currentJitterValue, intendedJitterValue, timeStep * jitterSpeed);
 		ApplyJitter(currentJitterValue);
 	}
 
@@ -47,6 +52,14 @@ public class JitterPosition : ManagedBehaviour
     {
         enabled = false;
         transform.localPosition = originalPos;
+    }
+
+    private void FloorSubpixelAmount()
+    {
+        if (amount < 0.01f)
+        {
+            amount = 0f;
+        }
     }
 
 	private void SetNewIntendedValue()

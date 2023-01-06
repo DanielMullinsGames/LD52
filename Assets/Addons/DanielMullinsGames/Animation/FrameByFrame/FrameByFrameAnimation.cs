@@ -1,49 +1,63 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class AnimatingSprite : TimedBehaviour
+public abstract class FrameByFrameAnimation : TimedBehaviour
 {
     public bool Reversed { get; set; }
+    public bool Animating => enabled;
 
-    private int FrameCount => frames.Count;
+    public System.Action<int> FrameChanged;
 
-    [Header("Frames")]
-    [SerializeField]
-	private List<Sprite> frames = new List<Sprite>();
+    protected abstract int FrameCount { get; }
 
-    [SerializeField]
-    private bool randomizeFrames = default;
-
-    [ShowIf("randomizeFrames")]
-    [SerializeField]
+    [ShowIf("randomizeFrames"), SerializeField]
     private bool noRepeat = default;
 
-    [Header("Animation")]
-    [SerializeField]
+    [Header("Animation"), SerializeField]
+    private bool startAtRandomFrame = false;
+
+    [HideIf("startAtRandomFrame"), SerializeField]
     private int frameOffset = 0;
 
     [SerializeField]
-	private bool stopAfterSingleIteration = false;
+    private bool stopAfterSingleIteration = false;
 
-    [HideIf("stopAfterSingleIteration")]
-    [SerializeField]
+    [HideIf("stopAfterSingleIteration"), SerializeField]
     private bool pingpong = default;
 
-	private SpriteRenderer sR;
+    [HideIf("stopAfterSingleIteration"), SerializeField]
+    private float waitBetweenLoopsMin = default;
+
+    [HideIf("stopAfterSingleIteration"), SerializeField]
+    private float waitBetweenLoopsMax = default;
+
+    [Header("Frames"), SerializeField]
+    private bool randomizeFrames = default;
 
     private int frameIndex;
-	private bool stopOnNextFrame;
+    private bool stopOnNextFrame;
+
+    protected abstract void FindRendererComponent();
+    protected abstract void DisplayFrame(int frameIndex);
+    protected abstract void Clear();
 
     protected override void ManagedInitialize()
     {
-        sR = GetComponent<SpriteRenderer>();
-
-        if (frameOffset > 0)
+        FindRendererComponent();
+        
+        if (startAtRandomFrame)
+        {
+            frameIndex = Random.Range(0, FrameCount);
+        }
+        else if (frameOffset > 0)
         {
             frameIndex = frameOffset;
         }
         SetFrame(frameIndex);
+
+        AddDelay(CustomRandom.RandomBetween(waitBetweenLoopsMin, waitBetweenLoopsMax));
     }
 
     protected override void OnTimerReached()
@@ -67,8 +81,8 @@ public class AnimatingSprite : TimedBehaviour
 
     public void StopAnimating()
     {
-		stopOnNextFrame = true;
-	}
+        stopOnNextFrame = true;
+    }
 
     public void Stop()
     {
@@ -85,7 +99,7 @@ public class AnimatingSprite : TimedBehaviour
         }
         else
         {
-            frameIndex = frames.Count - 1;
+            frameIndex = FrameCount - 1;
         }
         SetFrame(frameIndex);
     }
@@ -144,8 +158,9 @@ public class AnimatingSprite : TimedBehaviour
                     }
                     else
                     {
-                        frameIndex = 0;
+                        frameIndex = Reversed ? FrameCount - 1 : 0;
                     }
+                    AddDelay(CustomRandom.RandomBetween(waitBetweenLoopsMin, waitBetweenLoopsMax));
                 }
             }
 
@@ -153,19 +168,9 @@ public class AnimatingSprite : TimedBehaviour
         }
     }
 
-	private void Clear()
+    private void SetFrame(int index)
     {
-        if (sR != null)
-        {
-		    sR.sprite = null;
-        }
-	}
-
-    private void SetFrame(int frameIndex)
-    {
-        if (sR != null)
-        {
-            sR.sprite = frames[frameIndex];
-        }
+        FrameChanged?.Invoke(index);
+        DisplayFrame(index);
     }
 }

@@ -420,8 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ebd75cce3b27744ae8c063d06c13b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceHeightMin: 240
-  referenceHeightMax: 280
+  referenceHeightMin: 250
+  referenceHeightMax: 250
   referenceHeightMultiplier: 1
   minAspectRatio: 1.75
   renderTextureSetter: {fileID: 1238470754164001769}

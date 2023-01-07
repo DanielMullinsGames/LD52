@@ -24,4 +24,9 @@ public abstract class InteractablePanel : Interactable2D
     {
         Tooltip.SetActive(false);
     }
+
+    private void OnDisable()
+    {
+        Tooltip.SetActive(false);
+    }
 }

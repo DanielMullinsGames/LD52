@@ -3990,7 +3990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &959836729
 Transform:
   m_ObjectHideFlags: 0
@@ -7696,6 +7696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AvailableTab
       objectReference: {fileID: 0}
+    - target: {fileID: 5484565335466937294, guid: fb794e8f960288245a74d1cf2faa6961, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5484565335466937295, guid: fb794e8f960288245a74d1cf2faa6961, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8881,6 +8885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LearnedTab
       objectReference: {fileID: 0}
+    - target: {fileID: 5484565335466937294, guid: fb794e8f960288245a74d1cf2faa6961, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5484565335466937295, guid: fb794e8f960288245a74d1cf2faa6961, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8952,7 +8960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324752474144884736, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34000003
+      value: -0.23000002
       objectReference: {fileID: 0}
     - target: {fileID: 7324752474144884736, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
       propertyPath: m_LocalPosition.z

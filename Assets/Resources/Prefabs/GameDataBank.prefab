@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources:
   - {fileID: 11400000, guid: 22ac51f6eeb3f30489b41717110616c9, type: 2}
+  - {fileID: 11400000, guid: 88cd120227e8e5f4e800d56c3ad2509c, type: 2}

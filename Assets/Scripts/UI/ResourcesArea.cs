@@ -16,6 +16,11 @@ public class ResourcesArea : ManagedBehaviour
     public List<ResourcePanel> Panels => panels;
     private List<ResourcePanel> panels = new List<ResourcePanel>();
 
+    public void TickResources(float timeStep)
+    {
+        panels.ForEach(x => x.TickResource(timeStep));
+    }
+
     public ResourcePanel AddResourcePanel(ResourceData data)
     {
         var panelObj = Instantiate(resourcePanelPrefab);

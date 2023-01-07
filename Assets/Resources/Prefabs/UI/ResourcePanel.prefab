@@ -309,6 +309,7 @@ MonoBehaviour:
   amountText: {fileID: 6748487371353378537}
   rateText: {fileID: 6748487370108572379}
   barRenderer: {fileID: 8461090277891526108}
+  maxBarLength: 102
 --- !u!1 &8461090277891526106
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 6738841716622713136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Name
       value: Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738841716622713136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Pivot.x
@@ -722,6 +727,10 @@ PrefabInstance:
       value: +0.1/s
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716831009136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7abc4801c41775f4a89e33d6327288f5, type: 2}
+    - target: {fileID: 6738841716831009136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 5
       objectReference: {fileID: 0}
@@ -832,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.07999992
+      value: -0.43000007
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -855,12 +864,16 @@ PrefabInstance:
       value: 50/100
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716831009136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7abc4801c41775f4a89e33d6327288f5, type: 2}
+    - target: {fileID: 6738841716831009136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716831009138, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716831009138, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_SizeDelta.x

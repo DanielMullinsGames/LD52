@@ -23,4 +23,9 @@ public class Civilization : ManagedBehaviour
         var data = GameDataReferences.Instance.resources.Find(x => x.resourceType == resourceType);
         resources.AddResourcePanel(data);
     }
+
+    public override void ManagedUpdate()
+    {
+        resources.TickResources(Time.deltaTime);
+    }
 }

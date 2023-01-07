@@ -12,6 +12,7 @@ public enum ResourceType
 public class ResourceData : ScriptableObject
 {
     public ResourceType resourceType;
+    public string displayName;
     public Color color;
     public Sprite sprite;
     public float baseAmount;

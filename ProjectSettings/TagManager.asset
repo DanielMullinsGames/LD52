@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Grid
+    uniqueID: 3148013103
+    locked: 0
+  - name: GridHorizon
+    uniqueID: 1829707325
+    locked: 0
+  - name: GridTileElements
+    uniqueID: 330757233
+    locked: 0
+  - name: UI
+    uniqueID: 1124719109
+    locked: 0

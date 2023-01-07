@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738841716622713151}
   - component: {fileID: 6738841716622713150}
+  - component: {fileID: 2939906373240462115}
   m_Layer: 6
   m_Name: PixelText
   m_TagString: Untagged
@@ -59,6 +60,22 @@ Canvas:
   m_SortingLayerID: 1124719109
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2939906373240462115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738841716622713136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acccc8b6cd68e1143b0fa878d2aa346d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 6738841716831009136}
+  switchFontIfTruncated: 0
+  defaultFont: {fileID: 0}
+  truncatedFontSwitch: {fileID: 0}
 --- !u!1 &6738841716831009141
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7492cc7b9f4f754d98ccf1c28b14caa, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  resourceType: 0
+  color: {r: 0.9764706, g: 0.8235294, b: 0.49411765, a: 1}
+  sprite: {fileID: -1663831859, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+  baseAmount: 0
+  baseRate: 0.1
+  baseMaximum: 10

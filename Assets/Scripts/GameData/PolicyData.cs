@@ -7,6 +7,13 @@ public enum PolicyType
 {
     None,
     BuildFarm,
+    BuildChurch,
+    BuildSchool,
+    TaxInKind,
+    TaxInCash,
+    DoubleEffect,
+    Sacrifice,
+    War,
 }
 
 [CreateAssetMenu(fileName = "PolicyData", menuName = "LD52/PolicyData")]

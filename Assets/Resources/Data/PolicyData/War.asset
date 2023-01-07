@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2c3e0910f96394ab0c9a50693801a2, type: 3}
+  m_Name: War
+  m_EditorClassIdentifier: 
+  policyType: 8
+  displayName: Invasion
+  description: +100 Money, +1 Money/s, +100 Knowledge, +1 Knowledge/s.
+  icon: {fileID: -433706212, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
+  greyScaleIcon: {fileID: -702791236, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
+  baseCooldown: 10
+  costTypes: 0500000002000000
+  costAmounts:
+  - 100
+  - 100

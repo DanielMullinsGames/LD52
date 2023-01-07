@@ -37,8 +37,8 @@ public class PoliciesArea : ManagedBehaviour
         var panelObj = Instantiate(policyPanelPrefab);
 
         Vector2 pos = panelsAnchor.position + Vector3.right * panelsSpacing * panels.Count;
-        panelObj.transform.position = pos + Vector2.right * 4f;
-        Tween.Position(panelObj.transform, pos, 0.4f, 0f, Tween.EaseOutStrong);
+        panelObj.transform.position = pos + Vector2.down * 1f;
+        Tween.Position(panelObj.transform, pos, 0.25f, 0f, Tween.EaseOut);
 
         var panel = panelObj.GetComponent<PolicyPanel>();
         panel.Initialize(data, civ);

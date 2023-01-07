@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7492cc7b9f4f754d98ccf1c28b14caa, type: 3}
-  m_Name: People
+  m_Name: Money
   m_EditorClassIdentifier: 
-  resourceType: 2
-  displayName: People
-  color: {r: 0.6415094, g: 0.5684266, b: 0.5168387, a: 1}
-  sprite: {fileID: 1391153843, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
-  baseAmount: 10
-  baseRate: 1
+  resourceType: 4
+  displayName: Money
+  color: {r: 0.5137255, g: 0.6627451, b: 0.54509807, a: 1}
+  sprite: {fileID: -1374442224, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+  baseAmount: 0
+  baseRate: 0
   baseMaximum: 100

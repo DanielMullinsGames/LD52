@@ -7,6 +7,11 @@ public enum ResourceType
     None,
     Grain,
     People,
+    Faith,
+    Money,
+    Force,
+    Knowledge,
+    Boba,
     NUM_RESOURCES
 }
 

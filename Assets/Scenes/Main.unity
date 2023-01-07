@@ -2242,7 +2242,7 @@ MonoBehaviour:
   technologies: {fileID: 359452679}
   landGrid: {fileID: 169318037}
   rulerView: {fileID: 2656398511706923768}
-  debugAddResources: 02000000
+  debugAddResources: 020000000100000003000000040000000500000006000000
   debugAddPolicies: 
   debugAddAvailableTech: 0100000002000000
   debugAddLearnedTech: 

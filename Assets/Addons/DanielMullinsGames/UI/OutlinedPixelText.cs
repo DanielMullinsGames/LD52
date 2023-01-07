@@ -43,6 +43,7 @@ public class OutlinedPixelText : MonoBehaviour
                     break;
             }
             outlineCloneObj.transform.localPosition = cloneOffset;
+            outlineClones.Add(outlineClone);
         }
     }
 

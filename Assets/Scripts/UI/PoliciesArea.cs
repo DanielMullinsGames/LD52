@@ -30,6 +30,7 @@ public class PoliciesArea : ManagedBehaviour
         panel.Initialize(data);
 
         panels.Add(panel);
+        panel.SetHotkey(panels.Count);
         return panel;
     }
 }

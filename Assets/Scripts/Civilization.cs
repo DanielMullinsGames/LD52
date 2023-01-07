@@ -39,6 +39,8 @@ public class Civilization : ManagedBehaviour
 
     public override void ManagedUpdate()
     {
-        resources.TickResources(Time.deltaTime);
+        float timeStep = Time.deltaTime;
+        resources.TickResources(timeStep);
+        policies.TickCooldowns(timeStep);
     }
 }

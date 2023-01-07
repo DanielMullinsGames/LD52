@@ -17,7 +17,8 @@ MonoBehaviour:
   description: 
   icon: {fileID: 0}
   costTypes: 02000000
-  costAmounts: 0a000000
+  costAmounts:
+  - 10
   policyUnlock: {fileID: 11400000, guid: 7ab1f679b193b974c9f6520a1d2470e6, type: 2}
   resourceModification: 0
   resourceMaxModification: 0

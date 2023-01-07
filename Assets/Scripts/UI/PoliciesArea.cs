@@ -5,6 +5,9 @@ using UnityEngine;
 public class PoliciesArea : ManagedBehaviour
 {
     [SerializeField]
+    private Civilization civ = default;
+
+    [SerializeField]
     private PolicyActivationManager activationManager = default;
 
     [SerializeField]
@@ -42,6 +45,13 @@ public class PoliciesArea : ManagedBehaviour
 
     private void OnPanelActivated(PolicyPanel panel)
     {
-        activationManager.ActivatePolicy(panel);
+        if (civ.Resources.CanAffordCost(panel.Data.costTypes, panel.Data.costAmounts))
+        {
+            activationManager.ActivatePolicy(panel);
+        }
+        else
+        {
+            //TODO show cannot afford
+        }
     }
 }

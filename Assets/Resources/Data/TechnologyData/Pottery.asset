@@ -16,8 +16,10 @@ MonoBehaviour:
   displayName: Pottery
   description: 
   icon: {fileID: 0}
-  costTypes: 02000000
-  costAmounts: 0a000000
+  costTypes: 0200000001000000
+  costAmounts:
+  - 10
+  - 10
   policyUnlock: {fileID: 0}
   resourceModification: 1
   resourceMaxModification: 100

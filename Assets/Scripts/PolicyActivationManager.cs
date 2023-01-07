@@ -9,8 +9,13 @@ public class PolicyActivationManager : ManagedBehaviour
 
     public void ActivatePolicy(PolicyPanel panel)
     {
-        //TODO: pay costs
+        // Pay cost
+        for (int i = 0; i < panel.Data.costTypes.Count; i++)
+        {
+            civ.Resources.GetOrCreateResource(panel.Data.costTypes[i]).PayCost(panel.Data.costAmounts[i]);
+        }
 
+        // Activate
         switch (panel.Data.policyType)
         {
             case PolicyType.BuildFarm:

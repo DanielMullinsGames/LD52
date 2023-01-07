@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
+
 public enum PolicyType
 {
     None,
@@ -17,4 +19,9 @@ public class PolicyData : ScriptableObject
     public Sprite icon;
     public Sprite greyScaleIcon;
     public float baseCooldown;
+
+    [BoxGroup("Costs")]
+    public List<ResourceType> costTypes = new List<ResourceType>();
+    [BoxGroup("Costs")]
+    public List<float> costAmounts = new List<float>();
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class TechnologyArea : ManagedBehaviour
 {
     [SerializeField]
+    private Civilization civ;
+
+    [SerializeField]
     private TechnologyActivationManager activationManager;
 
     [SerializeField]
@@ -70,7 +73,14 @@ public class TechnologyArea : ManagedBehaviour
 
     private void OnAttemptPurchase(TechnologyPurchasePanel panel)
     {
-        PurchaseTechnology(panel);
+        if (civ.Resources.CanAffordCost(panel.Data.costTypes, panel.Data.costAmounts))
+        {
+            PurchaseTechnology(panel);
+        }
+        else
+        {
+            // TODO show cannot afford
+        }
     }
 
     private void PurchaseTechnology(TechnologyPurchasePanel panel)

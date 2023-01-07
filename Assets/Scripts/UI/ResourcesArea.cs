@@ -15,6 +15,18 @@ public class ResourcesArea : ManagedBehaviour
 
     private List<ResourcePanel> panels = new List<ResourcePanel>();
 
+    public bool CanAffordCost(List<ResourceType> costTypes, List<float> costAmounts)
+    {
+        for (int i = 0; i < costTypes.Count; i++)
+        {
+            if (GetResource(costTypes[i]) == null || GetResource(costTypes[i]).Amount < costAmounts[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void TickResources(float timeStep)
     {
         panels.ForEach(x => x.TickResource(timeStep));

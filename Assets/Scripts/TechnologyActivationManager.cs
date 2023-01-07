@@ -10,7 +10,10 @@ public class TechnologyActivationManager : ManagedBehaviour
     public void ActivateTech(TechnologyPurchasePanel panel)
     {
         // Pay cost
-
+        for (int i = 0; i < panel.Data.costTypes.Count; i++)
+        {
+            civ.Resources.GetOrCreateResource(panel.Data.costTypes[i]).PayCost(panel.Data.costAmounts[i]);
+        }
 
         // Standard effects
         if (panel.Data.policyUnlock != null)

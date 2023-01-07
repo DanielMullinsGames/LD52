@@ -22,7 +22,7 @@ public class TechnologyData : ScriptableObject
     [BoxGroup("Costs")]
     public List<ResourceType> costTypes = new List<ResourceType>();
     [BoxGroup("Costs")]
-    public List<int> costAmounts = new List<int>();
+    public List<float> costAmounts = new List<float>();
 
     [BoxGroup("Effects")]
     public PolicyData policyUnlock;

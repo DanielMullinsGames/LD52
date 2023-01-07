@@ -50,6 +50,11 @@ public class ResourcePanel : ManagedBehaviour
         UpdateDisplay();
     }
 
+    public void PayCost(float cost)
+    {
+        Amount = Mathf.Max(0f, Amount - cost);
+    }
+
     private void UpdateDisplay()
     {
         string amountString = ColorUtils.ColorString(Amount.ToString("0.0"), Data.color);

@@ -14,6 +14,8 @@ public enum PolicyType
     DoubleEffect,
     Sacrifice,
     War,
+    Recruit,
+    Trade,
 }
 
 [CreateAssetMenu(fileName = "PolicyData", menuName = "LD52/PolicyData")]
@@ -31,6 +33,13 @@ public class PolicyData : ScriptableObject
     public List<ResourceType> costTypes = new List<ResourceType>();
     [BoxGroup("Costs")]
     public List<float> costAmounts = new List<float>();
+
+    [BoxGroup("Effects")]
+    public ResourceType resourceModification;
+    [BoxGroup("Effects"), ShowIf("@resourceModification != ResourceType.None")]
+    public float resourceAmountModification;
+    [BoxGroup("Effects"), ShowIf("@resourceModification != ResourceType.None")]
+    public float resourceRateModification;
 
     public string GetDescription()
     {
@@ -56,6 +65,19 @@ public class PolicyData : ScriptableObject
             }
         }
 
-        return costString + ResourceData.ColorFormattedString(description);
+        string effectString = "";
+        if (resourceModification != ResourceType.None)
+        {
+            if (resourceAmountModification > 0f)
+            {
+                effectString += $"+{resourceAmountModification.ToString("0")} {resourceModification}.";
+            }
+            if (resourceRateModification > 0f)
+            {
+                effectString += $"+{resourceRateModification.ToString("0.0")} {resourceModification} per second.";
+            }
+        }
+
+        return costString + ResourceData.ColorFormattedString(effectString + description);
     }
 }

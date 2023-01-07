@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   policyType: 3
   displayName: Build School
-  description: +0.3 Knowledge per second.
+  description: 
   icon: {fileID: -238868230, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
   greyScaleIcon: {fileID: 310203892, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
   costTypes: 02000000
   costAmounts:
   - 4
+  resourceModification: 6
+  resourceAmountModification: 0
+  resourceRateModification: 0.3

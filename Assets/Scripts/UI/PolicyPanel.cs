@@ -61,8 +61,10 @@ public class PolicyPanel : InteractablePanel
 
     public void SetHotkey(int order)
     {
-        hotkeyText.SetText(order.ToString());
         hotkeyCode = HOTKEY_CODES[order];
+        if (order == 10)
+            order = 0;
+        hotkeyText.SetText(order.ToString());
     }
 
     public void TickCooldown(float timeStep)

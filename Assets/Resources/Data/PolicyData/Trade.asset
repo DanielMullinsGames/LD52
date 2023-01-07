@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2c3e0910f96394ab0c9a50693801a2, type: 3}
-  m_Name: TaxInKind
+  m_Name: Trade
   m_EditorClassIdentifier: 
-  policyType: 4
-  displayName: Tax In Kind
+  policyType: 10
+  displayName: Trade Shipment
   description: 
-  icon: {fileID: 1673540606, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
-  greyScaleIcon: {fileID: 791737504, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
+  icon: {fileID: -169518329, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
+  greyScaleIcon: {fileID: -1520288239, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
-  costTypes: 05000000
+  costTypes: 01000000
   costAmounts:
-  - 5
-  resourceModification: 1
-  resourceAmountModification: 10
+  - 20
+  resourceModification: 4
+  resourceAmountModification: 50
   resourceRateModification: 0

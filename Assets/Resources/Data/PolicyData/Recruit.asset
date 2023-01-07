@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2c3e0910f96394ab0c9a50693801a2, type: 3}
-  m_Name: TaxInKind
+  m_Name: Recruit
   m_EditorClassIdentifier: 
-  policyType: 4
-  displayName: Tax In Kind
+  policyType: 9
+  displayName: Recruit Soldiers
   description: 
-  icon: {fileID: 1673540606, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
-  greyScaleIcon: {fileID: 791737504, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
+  icon: {fileID: -1276605795, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
+  greyScaleIcon: {fileID: -203418033, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
-  costTypes: 05000000
+  costTypes: 0200000004000000
   costAmounts:
   - 5
-  resourceModification: 1
-  resourceAmountModification: 10
+  - 10
+  resourceModification: 5
+  resourceAmountModification: 20
   resourceRateModification: 0

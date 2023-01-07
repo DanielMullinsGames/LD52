@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   policyType: 7
   displayName: Human Sacrifice
-  description: +50 Faith.
+  description: 
   icon: {fileID: -38950043, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
   greyScaleIcon: {fileID: 942813478, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
   costTypes: 02000000
   costAmounts:
   - 10
+  resourceModification: 3
+  resourceAmountModification: 50
+  resourceRateModification: 0

@@ -2153,7 +2153,7 @@ MonoBehaviour:
   resources: {fileID: 800606529}
   policies: {fileID: 581141038}
   landGrid: {fileID: 169318037}
-  debugAddResources: 0100000002000000
+  debugAddResources: 02000000
   debugAddPolicies: 010000000100000001000000
 --- !u!1001 &624375152
 PrefabInstance:

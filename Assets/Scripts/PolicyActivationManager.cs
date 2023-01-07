@@ -15,6 +15,7 @@ public class PolicyActivationManager : ManagedBehaviour
         {
             case PolicyType.BuildFarm:
                 civ.AddImprovement(TileImprovementType.Farm);
+                civ.Resources.GetOrCreateResource(ResourceType.Grain).Rate += 0.1f;
                 break;
         }
     }

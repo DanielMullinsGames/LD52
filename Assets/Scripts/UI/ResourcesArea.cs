@@ -13,7 +13,6 @@ public class ResourcesArea : ManagedBehaviour
     [SerializeField]
     private Transform panelsAnchor;
 
-    public List<ResourcePanel> Panels => panels;
     private List<ResourcePanel> panels = new List<ResourcePanel>();
 
     public void TickResources(float timeStep)
@@ -21,13 +20,31 @@ public class ResourcesArea : ManagedBehaviour
         panels.ForEach(x => x.TickResource(timeStep));
     }
 
-    public ResourcePanel AddResourcePanel(ResourceData data)
+    public ResourcePanel GetOrCreateResource(ResourceType resourceType)
+    {
+        var panel = GetResource(resourceType);
+        if (panel == null)
+        {
+            return AddResourcePanel(resourceType);
+        }
+        else
+        {
+            return panel;
+        }
+    }
+
+    public ResourcePanel GetResource(ResourceType resourceType)
+    {
+        return panels.Find(x => x.Data.resourceType == resourceType);
+    }
+
+    public ResourcePanel AddResourcePanel(ResourceType resourceType)
     {
         var panelObj = Instantiate(resourcePanelPrefab);
         panelObj.transform.position = panelsAnchor.position + Vector3.down * panelsSpacing * panels.Count;
 
         var panel = panelObj.GetComponent<ResourcePanel>();
-        panel.Initialize(data);
+        panel.Initialize(GameDataReferences.GetResourceData(resourceType));
 
         panels.Add(panel);
         return panel;

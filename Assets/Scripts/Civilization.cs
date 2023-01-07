@@ -5,9 +5,11 @@ using Sirenix.OdinInspector;
 
 public class Civilization : ManagedBehaviour
 {
+    public ResourcesArea Resources => resources;
     [SerializeField]
     private ResourcesArea resources;
 
+    public PoliciesArea Policies => policies;
     [SerializeField]
     private PoliciesArea policies;
 
@@ -23,15 +25,9 @@ public class Civilization : ManagedBehaviour
     private void Start()
     {
 #if UNITY_EDITOR
-        debugAddResources.ForEach(x => AddResource(x));
+        debugAddResources.ForEach(x => resources.AddResourcePanel(x));
         debugAddPolicies.ForEach(x => AddPolicy(x));
 #endif
-    }
-
-    public void AddResource(ResourceType resourceType)
-    {
-        var data = GameDataReferences.GetResourceData(resourceType);
-        resources.AddResourcePanel(data);
     }
 
     public void AddPolicy(PolicyType policyType)

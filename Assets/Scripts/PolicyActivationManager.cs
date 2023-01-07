@@ -15,12 +15,18 @@ public class PolicyActivationManager : ManagedBehaviour
             civ.Resources.GetOrCreateResource(panel.Data.costTypes[i]).PayCost(panel.Data.costAmounts[i]);
         }
 
-        // Activate
+        // Basic effects
+        if (panel.Data.resourceModification != ResourceType.None)
+        {
+            civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Amount += panel.Data.resourceAmountModification;
+            civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
+        }
+
+        // Special effects
         switch (panel.Data.policyType)
         {
             case PolicyType.BuildFarm:
                 civ.AddImprovement(TileImprovementType.Farm);
-                civ.Resources.GetOrCreateResource(ResourceType.Grain).Rate += 0.1f;
                 break;
         }
     }

@@ -63,4 +63,12 @@ public class ResourcesArea : ManagedBehaviour
         panels.Add(panel);
         return panel;
     }
+
+    public override void ManagedUpdate()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.F))
+        {
+            TickResources(10f);
+        }
+    }
 }

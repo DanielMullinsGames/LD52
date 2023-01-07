@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pixelplacement;
 
-public class PolicyPanel : Interactable2D
+public class PolicyPanel : InteractablePanel
 {
+    protected override Tooltip Tooltip => civ.Policies.tooltip;
+    protected override string TooltipTitle => Data.displayName;
+    protected override string TooltipDescription => Data.GetDescription();
+
     public System.Action<PolicyPanel> Activated;
     public PolicyData Data { get; private set; }
 

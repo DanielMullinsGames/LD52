@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TechnologyPanel : Interactable2D
+public class TechnologyPanel : InteractablePanel
 {
+    protected override Tooltip Tooltip => area.tooltip;
+    protected override string TooltipTitle => "";
+    protected override string TooltipDescription => Data.description;
+
     public TechnologyData Data { get; private set; }
 
     [SerializeField]
     private PixelText nameText;
 
-    public virtual void Initialize(TechnologyData data)
+    private TechnologyArea area;
+
+    public virtual void Initialize(TechnologyData data, TechnologyArea area)
     {
+        this.area = area;
         Data = data;
         nameText.SetText(data.displayName);
     }

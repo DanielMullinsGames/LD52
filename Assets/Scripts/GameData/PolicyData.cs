@@ -24,4 +24,9 @@ public class PolicyData : ScriptableObject
     public List<ResourceType> costTypes = new List<ResourceType>();
     [BoxGroup("Costs")]
     public List<float> costAmounts = new List<float>();
+
+    public string GetDescription()
+    {
+        return description;
+    }
 }

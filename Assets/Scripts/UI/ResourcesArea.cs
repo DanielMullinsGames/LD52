@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ResourcesArea : ManagedBehaviour
 {
+    public Tooltip tooltip;
+
     [SerializeField]
     private GameObject resourcePanelPrefab;
 
@@ -56,7 +58,7 @@ public class ResourcesArea : ManagedBehaviour
         panelObj.transform.position = panelsAnchor.position + Vector3.down * panelsSpacing * panels.Count;
 
         var panel = panelObj.GetComponent<ResourcePanel>();
-        panel.Initialize(GameDataReferences.GetResourceData(resourceType));
+        panel.Initialize(GameDataReferences.GetResourceData(resourceType), this);
 
         panels.Add(panel);
         return panel;

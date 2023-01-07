@@ -5,6 +5,8 @@ using Pixelplacement;
 
 public class PoliciesArea : ManagedBehaviour
 {
+    public Tooltip tooltip;
+
     [SerializeField]
     private Civilization civ = default;
 

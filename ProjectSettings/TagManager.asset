@@ -53,3 +53,6 @@ TagManager:
   - name: UI
     uniqueID: 1124719109
     locked: 0
+  - name: Tooltip
+    uniqueID: 3606254431
+    locked: 0

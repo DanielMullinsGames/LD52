@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResourcePanel : ManagedBehaviour
+public class ResourcePanel : InteractablePanel
 {
+    protected override Tooltip Tooltip => area.tooltip;
+    protected override string TooltipTitle => ColorUtils.ColorString(Data.displayName.ToUpper(), Data.color);
+    protected override string TooltipDescription => "";
+
     public ResourceData Data { get; private set; }
 
     public float Amount { get; set; }
@@ -29,8 +33,11 @@ public class ResourcePanel : ManagedBehaviour
     [SerializeField]
     private float maxBarLength;
 
-    public void Initialize(ResourceData data)
+    private ResourcesArea area;
+
+    public void Initialize(ResourceData data, ResourcesArea area)
     {
+        this.area = area;
         Data = data;
         Amount = data.baseAmount;
         Maximum = data.baseMaximum;

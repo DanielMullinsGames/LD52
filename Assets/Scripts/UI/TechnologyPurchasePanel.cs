@@ -10,9 +10,9 @@ public class TechnologyPurchasePanel : TechnologyPanel
     [SerializeField]
     private List<PixelText> costTexts;
 
-    public override void Initialize(TechnologyData data)
+    public override void Initialize(TechnologyData data, TechnologyArea area)
     {
-        base.Initialize(data);
+        base.Initialize(data, area);
 
         costIcons.ForEach(x => x.gameObject.SetActive(false));
         costTexts.ForEach(x => x.gameObject.SetActive(false));

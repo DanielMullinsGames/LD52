@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TechnologyArea : ManagedBehaviour
 {
+    public Tooltip tooltip;
+
     [SerializeField]
     private Civilization civ;
 
@@ -42,7 +44,7 @@ public class TechnologyArea : ManagedBehaviour
         var panelObj = Instantiate(availablePanelPrefab, availableTechnogiesParent);
 
         var panel = panelObj.GetComponent<TechnologyPurchasePanel>();
-        panel.Initialize(GameDataReferences.GetTechnologyData(techType));
+        panel.Initialize(GameDataReferences.GetTechnologyData(techType), this);
         panel.CursorSelectStarted += (Interactable p) => OnAttemptPurchase(p.GetComponent<TechnologyPurchasePanel>());
 
         availablePanels.Add(panel);
@@ -56,7 +58,7 @@ public class TechnologyArea : ManagedBehaviour
         var panelObj = Instantiate(learnedPanelPrefab, learnedTechnologiesParent);
 
         var panel = panelObj.GetComponent<TechnologyPanel>();
-        panel.Initialize(GameDataReferences.GetTechnologyData(techType));
+        panel.Initialize(GameDataReferences.GetTechnologyData(techType), this);
 
         learnedPanels.Add(panel);
 
@@ -78,8 +80,8 @@ public class TechnologyArea : ManagedBehaviour
             PurchaseTechnology(panel);
         }
         else
-        {
             // TODO show cannot afford
+        {
         }
     }
 

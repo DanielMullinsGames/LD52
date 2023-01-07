@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6678643818538549861
+--- !u!1 &6309929657493769893
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6678643818538549860}
-  - component: {fileID: 6678643818538549883}
+  - component: {fileID: 6309929657493769894}
+  - component: {fileID: 6309929657493769895}
   m_Layer: 0
-  m_Name: GameDataBank
+  m_Name: GridTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6678643818538549860
+--- !u!4 &6309929657493769894
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678643818538549861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6309929657493769893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.84, y: -0.63500005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6678643818538549883
+--- !u!114 &6309929657493769895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678643818538549861}
+  m_GameObject: {fileID: 6309929657493769893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d6c735ae145414080d2272e1cde801, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bb2063a7702ab24481c12b9684016ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resources:
-  - {fileID: 11400000, guid: 22ac51f6eeb3f30489b41717110616c9, type: 2}
-  - {fileID: 11400000, guid: 88cd120227e8e5f4e800d56c3ad2509c, type: 2}
-  policies:
-  - {fileID: 11400000, guid: 7ab1f679b193b974c9f6520a1d2470e6, type: 2}

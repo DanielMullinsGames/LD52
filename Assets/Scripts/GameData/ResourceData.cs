@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum ResourceType
 {
+    None,
     Grain,
     People,
 }

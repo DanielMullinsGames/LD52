@@ -11,6 +11,9 @@ public class Civilization : ManagedBehaviour
     [SerializeField]
     private PoliciesArea policies;
 
+    [SerializeField]
+    private LandGrid landGrid;
+
     [FoldoutGroup("Debug"), SerializeField]
     private List<ResourceType> debugAddResources;
 
@@ -27,14 +30,19 @@ public class Civilization : ManagedBehaviour
 
     public void AddResource(ResourceType resourceType)
     {
-        var data = GameDataReferences.Instance.resources.Find(x => x.resourceType == resourceType);
+        var data = GameDataReferences.GetResourceData(resourceType);
         resources.AddResourcePanel(data);
     }
 
     public void AddPolicy(PolicyType policyType)
     {
-        var data = GameDataReferences.Instance.policies.Find(x => x.policyType == policyType);
+        var data = GameDataReferences.GetPolicyData(policyType);
         policies.AddPolicyPanel(data);
+    }
+
+    public void AddImprovement(TileImprovementType improvementType)
+    {
+        landGrid.AddImprovementToRandomTile(improvementType);
     }
 
     public override void ManagedUpdate()

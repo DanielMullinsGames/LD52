@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PolicyPanel : ManagedBehaviour
 {
+    public System.Action<PolicyPanel> Activated;
     public PolicyData Data { get; private set; }
 
     private bool OffCooldown => cooldownTimer <= 0f;
@@ -72,6 +73,7 @@ public class PolicyPanel : ManagedBehaviour
     {
         if (OffCooldown)
         {
+            Activated?.Invoke(this);
             cooldownTimer = Cooldown;
         }
         UpdateDisplay();

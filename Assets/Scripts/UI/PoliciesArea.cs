@@ -5,6 +5,9 @@ using UnityEngine;
 public class PoliciesArea : ManagedBehaviour
 {
     [SerializeField]
+    private PolicyActivationManager activationManager = default;
+
+    [SerializeField]
     private GameObject policyPanelPrefab = default;
 
     [SerializeField]
@@ -31,6 +34,12 @@ public class PoliciesArea : ManagedBehaviour
 
         panels.Add(panel);
         panel.SetHotkey(panels.Count);
+        panel.Activated += OnPanelActivated;
         return panel;
+    }
+
+    private void OnPanelActivated(PolicyPanel panel)
+    {
+        activationManager.ActivatePolicy(panel);
     }
 }

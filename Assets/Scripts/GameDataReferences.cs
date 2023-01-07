@@ -2,8 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDataReferences : Singleton<GameDataReferences>
+public static class GameDataReferences
 {
-    public List<ResourceData> resources = new List<ResourceData>();
-    public List<PolicyData> policies = new List<PolicyData>();
+    private static List<ResourceData> resources;
+    private static List<PolicyData> policies;
+    private static List<GameObject> tileImprovementPrefabs;
+
+    private static bool initialized = false;
+
+    public static ResourceData GetResourceData(ResourceType resourceType)
+    {
+        TryInitialize();
+        return resources.Find(x => x.resourceType == resourceType);
+    }
+
+    public static PolicyData GetPolicyData(PolicyType policyType)
+    {
+        TryInitialize();
+        return policies.Find(x => x.policyType == policyType);
+    }
+
+    public static GameObject GetTimeImprovementPrefab(TileImprovementType tileType)
+    {
+        TryInitialize();
+        return tileImprovementPrefabs.Find(x => x.GetComponent<TileImprovement>().ImprovementType == tileType);
+    }
+
+    private static void TryInitialize()
+    {
+        if (!initialized)
+        {
+            resources = new List<ResourceData>(Resources.LoadAll<ResourceData>("Data/ResourceData"));
+            policies = new List<PolicyData>(Resources.LoadAll<PolicyData>("Data/PolicyData"));
+            tileImprovementPrefabs = new List<GameObject>(Resources.LoadAll<GameObject>("Prefabs/GridView/TileImprovements"));
+
+            initialized = true;
+        }
+    }
 }

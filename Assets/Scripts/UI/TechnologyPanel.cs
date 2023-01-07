@@ -6,7 +6,7 @@ public class TechnologyPanel : InteractablePanel
 {
     protected override Tooltip Tooltip => area.tooltip;
     protected override string TooltipTitle => "";
-    protected override string TooltipDescription => Data.description;
+    protected override string TooltipDescription => Data.GetDescription();
 
     public TechnologyData Data { get; private set; }
 

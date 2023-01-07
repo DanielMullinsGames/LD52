@@ -27,6 +27,28 @@ public class PolicyData : ScriptableObject
 
     public string GetDescription()
     {
-        return description;
+        string costString = "";
+
+        if (costTypes.Count > 0)
+        {
+            costString += "Pay ";
+        }
+
+        for (int i = 0; i < costTypes.Count; i++)
+        {
+            costString += costAmounts[i].ToString() + " ";
+            costString += GameDataReferences.GetResourceData(costTypes[i]).GetColoredString();
+
+            if (i != costTypes.Count - 1)
+            {
+                costString += ", ";
+            }
+            else
+            {
+                costString += " for ";
+            }
+        }
+
+        return costString + ResourceData.ColorFormattedString(description);
     }
 }

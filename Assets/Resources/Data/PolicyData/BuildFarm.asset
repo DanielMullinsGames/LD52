@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   policyType: 1
   displayName: Grant Plot
-  description: +0.1 {Grain} per second.
+  description: +0.1 Grain per second.
   icon: {fileID: 207899419, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
   greyScaleIcon: {fileID: -740946273, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
-  costTypes: 
-  costAmounts: []
+  costTypes: 02000000
+  costAmounts:
+  - 4

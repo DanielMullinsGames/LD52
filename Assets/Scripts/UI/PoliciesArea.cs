@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 public class PoliciesArea : ManagedBehaviour
 {
@@ -32,10 +33,13 @@ public class PoliciesArea : ManagedBehaviour
         var data = GameDataReferences.GetPolicyData(type);
 
         var panelObj = Instantiate(policyPanelPrefab);
-        panelObj.transform.position = panelsAnchor.position + Vector3.right * panelsSpacing * panels.Count;
+
+        Vector2 pos = panelsAnchor.position + Vector3.right * panelsSpacing * panels.Count;
+        panelObj.transform.position = pos + Vector2.right * 4f;
+        Tween.Position(panelObj.transform, pos, 0.4f, 0f, Tween.EaseOutStrong);
 
         var panel = panelObj.GetComponent<PolicyPanel>();
-        panel.Initialize(data);
+        panel.Initialize(data, civ);
 
         panels.Add(panel);
         panel.SetHotkey(panels.Count);

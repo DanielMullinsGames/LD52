@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1007971465745811620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336239165853068075}
+  m_Layer: 0
+  m_Name: Anim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336239165853068075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007971465745811620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6373954883458086981}
+  - {fileID: 6373954884528604415}
+  - {fileID: 428399297402203130}
+  - {fileID: 5188482424394683773}
+  - {fileID: 8993902855615648518}
+  - {fileID: 5516500857189332969}
+  m_Father: {fileID: 6373954884707224603}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2210099322583800786
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +66,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6373954884707224603}
+  m_Father: {fileID: 1336239165853068075}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1544962351743908005
@@ -113,7 +150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6373954884707224603}
+  m_Father: {fileID: 1336239165853068075}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5188482424394683772
@@ -197,7 +234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6373954884707224603}
+  m_Father: {fileID: 1336239165853068075}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6373954883458086978
@@ -281,7 +318,7 @@ Transform:
   m_LocalScale: {x: 18, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6373954884707224603}
+  m_Father: {fileID: 1336239165853068075}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6373954884528604412
@@ -366,12 +403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6373954883458086981}
-  - {fileID: 6373954884528604415}
-  - {fileID: 428399297402203130}
-  - {fileID: 5188482424394683773}
-  - {fileID: 8993902855615648518}
-  - {fileID: 5516500857189332969}
+  - {fileID: 1336239165853068075}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -387,10 +419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ea752cdc7c0d74d92078cea5087774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortOrder: 0
   iconRenderer: {fileID: 5188482424394683772}
   greyScaleIconRenderer: {fileID: 1544962351743908005}
   cooldownText: {fileID: 4163302832624012789}
   hotkeyText: {fileID: 8122368884287836646}
+  anim: {fileID: 1336239165853068075}
 --- !u!61 &5807906479164824407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -422,7 +456,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6373954884707224603}
+    m_TransformParent: {fileID: 1336239165853068075}
     m_Modifications:
     - target: {fileID: 6738841716622713136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Name
@@ -602,7 +636,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6373954884707224603}
+    m_TransformParent: {fileID: 1336239165853068075}
     m_Modifications:
     - target: {fileID: 6738841716622713136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Name

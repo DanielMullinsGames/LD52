@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 public class PolicyPanel : Interactable2D
 {
@@ -23,8 +24,12 @@ public class PolicyPanel : Interactable2D
     [SerializeField]
     private PixelText hotkeyText;
 
+    [SerializeField]
+    private Transform anim;
+
     private float cooldownTimer = 0f;
     private KeyCode hotkeyCode;
+    private Civilization civ;
 
     private readonly KeyCode[] HOTKEY_CODES = new KeyCode[]
     {
@@ -41,8 +46,9 @@ public class PolicyPanel : Interactable2D
         KeyCode.Alpha0,
     };
 
-    public void Initialize(PolicyData data)
+    public void Initialize(PolicyData data, Civilization civ)
     {
+        this.civ = civ;
         Data = data;
         iconRenderer.sprite = data.icon;
         greyScaleIconRenderer.sprite = data.greyScaleIcon;
@@ -76,10 +82,21 @@ public class PolicyPanel : Interactable2D
 
     private void Activate()
     {
-        if (OffCooldown)
+        if (OffCooldown && civ.Resources.CanAffordCost(Data.costTypes, Data.costAmounts))
         {
+            Tween.LocalPosition(anim, Vector2.up * 0.03f, 0.05f, 0f, Tween.EaseOut);
+            Tween.LocalPosition(anim, Vector2.zero, 0.2f, 0.1f, Tween.EaseIn);
+
+            // ACTIVATE SOUND
+
             Activated?.Invoke(this);
             cooldownTimer = Cooldown;
+        }
+        else
+        {
+            Tween.Shake(anim, Vector2.zero, new Vector2(0.02f, 0.02f), 0.25f, 0f);
+
+            //NEGATE SOUND
         }
         UpdateDisplay();
     }

@@ -15,5 +15,7 @@ public class LandGridTile : ManagedBehaviour
         var prefab = GameDataReferences.GetTimeImprovementPrefab(improvementType);
         var obj = Instantiate(prefab, transform);
         obj.transform.localPosition = Vector2.zero;
+
+        ScreenShake.instance.AddIntensity(3f);
     }
 }

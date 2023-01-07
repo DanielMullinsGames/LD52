@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 1238470753674452403}
   - component: {fileID: 1238470753674452402}
   - component: {fileID: 2818569183098037088}
+  - component: {fileID: 3512682109641311982}
   m_Layer: 5
   m_Name: ScreenRender
   m_TagString: Untagged
@@ -200,6 +201,19 @@ MonoBehaviour:
   jitterFrequency: 0.01
   toFullExtent: 0
   amount: 0
+--- !u!114 &3512682109641311982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238470753674452400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4863182cb11490b438351a480c67ca72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jitterPosition: {fileID: 2818569183098037088}
 --- !u!1 &1238470753749941831
 GameObject:
   m_ObjectHideFlags: 0

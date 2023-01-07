@@ -5,6 +5,9 @@ using UnityEngine;
 public class TechnologyArea : ManagedBehaviour
 {
     [SerializeField]
+    private TechnologyActivationManager activationManager;
+
+    [SerializeField]
     private Transform availableTechnogiesParent;
 
     [SerializeField]
@@ -37,6 +40,7 @@ public class TechnologyArea : ManagedBehaviour
 
         var panel = panelObj.GetComponent<TechnologyPurchasePanel>();
         panel.Initialize(GameDataReferences.GetTechnologyData(techType));
+        panel.CursorSelectStarted += (Interactable p) => OnAttemptPurchase(p.GetComponent<TechnologyPurchasePanel>());
 
         availablePanels.Add(panel);
 
@@ -57,15 +61,23 @@ public class TechnologyArea : ManagedBehaviour
         return panel;
     }
 
-    public void RemoveTechnologyFromAvailable(TechnologyType type)
+    public void RemoveTechnologyFromAvailable(TechnologyPurchasePanel panel)
     {
+        availablePanels.Remove(panel);
+        Destroy(panel.gameObject);
         UpdatePanelPositions();
     }
 
-    public void PurchaseTechnology(TechnologyType type)
+    private void OnAttemptPurchase(TechnologyPurchasePanel panel)
     {
-        RemoveTechnologyFromAvailable(type);
-        AddTechnologyToLearned(type);
+        PurchaseTechnology(panel);
+    }
+
+    private void PurchaseTechnology(TechnologyPurchasePanel panel)
+    {
+        activationManager.ActivateTech(panel);
+        RemoveTechnologyFromAvailable(panel);
+        AddTechnologyToLearned(panel.Data.technologyType);
     }
 
     private void UpdatePanelPositions()

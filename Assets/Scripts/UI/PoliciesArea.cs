@@ -24,8 +24,10 @@ public class PoliciesArea : ManagedBehaviour
         panels.ForEach(x => x.TickCooldown(timeStep));
     }
 
-    public PolicyPanel AddPolicyPanel(PolicyData data)
+    public PolicyPanel AddPolicyPanel(PolicyType type)
     {
+        var data = GameDataReferences.GetPolicyData(type);
+
         var panelObj = Instantiate(policyPanelPrefab);
         panelObj.transform.position = panelsAnchor.position + Vector3.right * panelsSpacing * panels.Count;
 

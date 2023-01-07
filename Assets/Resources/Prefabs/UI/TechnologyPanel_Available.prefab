@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7324752474144884736}
   - component: {fileID: 7520371873360400995}
+  - component: {fileID: 8728200147251503033}
   m_Layer: 0
   m_Name: TechnologyPanel_Available
   m_TagString: Untagged
@@ -135,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43081683abfc3a488a9cafe5a812e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortOrder: 0
   nameText: {fileID: 5578300588145667332}
   costIcons:
   - {fileID: 7324752473592304405}
@@ -146,6 +148,32 @@ MonoBehaviour:
   - {fileID: 5974619197132371022}
   - {fileID: 5974619196876402339}
   - {fileID: 5974619197641020211}
+--- !u!61 &8728200147251503033
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324752474144884737}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.3}
+  m_EdgeRadius: 0
 --- !u!1 &7324752474646777555
 GameObject:
   m_ObjectHideFlags: 0

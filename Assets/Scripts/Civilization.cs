@@ -39,16 +39,10 @@ public class Civilization : ManagedBehaviour
     {
 #if UNITY_EDITOR
         debugAddResources.ForEach(x => resources.AddResourcePanel(x));
-        debugAddPolicies.ForEach(x => AddPolicy(x));
+        debugAddPolicies.ForEach(x => policies.AddPolicyPanel(x));
         debugAddAvailableTech.ForEach(x => technologies.AddTechnologyToAvailable(x));
         debugAddLearnedTech.ForEach(x => technologies.AddTechnologyToLearned(x));
 #endif
-    }
-
-    public void AddPolicy(PolicyType policyType)
-    {
-        var data = GameDataReferences.GetPolicyData(policyType);
-        policies.AddPolicyPanel(data);
     }
 
     public void AddImprovement(TileImprovementType improvementType)

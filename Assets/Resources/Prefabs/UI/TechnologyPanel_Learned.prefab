@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713361047819160006}
   - component: {fileID: 713361047819160056}
+  - component: {fileID: 4096945859266340451}
   m_Layer: 0
   m_Name: TechnologyPanel_Learned
   m_TagString: Untagged
@@ -130,7 +131,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096ae3e3335af7f409022e97bbad4a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sortOrder: 0
   nameText: {fileID: 2389998884412135077}
+--- !u!61 &4096945859266340451
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713361047819160007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.025}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.15}
+  m_EdgeRadius: 0
 --- !u!1001 &713361047067594118
 PrefabInstance:
   m_ObjectHideFlags: 0

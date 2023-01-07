@@ -1475,6 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359452678}
   - component: {fileID: 359452679}
+  - component: {fileID: 359452680}
   m_Layer: 0
   m_Name: Tech
   m_TagString: Untagged
@@ -1517,6 +1518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4b903939415724599a76a0a99a2d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activationManager: {fileID: 359452680}
   availableTechnogiesParent: {fileID: 153718705}
   learnedTechnologiesParent: {fileID: 959836729}
   availablePanelPrefab: {fileID: 7324752474144884737, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
@@ -1525,6 +1527,19 @@ MonoBehaviour:
   availableSpacing: 0.32
   learnedPosAnchor: {fileID: 7457630621183621726}
   learnedSpacing: 0.17
+--- !u!114 &359452680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359452677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada0ecd7703a09f4ebe6409af9b181ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  civ: {fileID: 620907866}
 --- !u!1001 &363658816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2222,9 +2237,9 @@ MonoBehaviour:
   landGrid: {fileID: 169318037}
   rulerView: {fileID: 2656398511706923768}
   debugAddResources: 02000000
-  debugAddPolicies: 010000000100000001000000
-  debugAddAvailableTech: 0200000002000000
-  debugAddLearnedTech: 0100000001000000
+  debugAddPolicies: 
+  debugAddAvailableTech: 0200000001000000
+  debugAddLearnedTech: 
 --- !u!1001 &624375152
 PrefabInstance:
   m_ObjectHideFlags: 0

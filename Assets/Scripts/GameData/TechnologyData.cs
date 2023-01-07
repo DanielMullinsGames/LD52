@@ -7,6 +7,7 @@ public enum TechnologyType
 {
     None,
     Agriculture,
+    Pottery,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]
@@ -17,7 +18,11 @@ public class TechnologyData : ScriptableObject
     [TextArea]
     public string description;
     public SpriteRenderer icon;
-    public Dictionary<ResourceType, int> costs = new Dictionary<ResourceType, int>();
+
+    [BoxGroup("Costs")]
+    public List<ResourceType> costTypes = new List<ResourceType>();
+    [BoxGroup("Costs")]
+    public List<int> costAmounts = new List<int>();
 
     [BoxGroup("Effects")]
     public PolicyData policyUnlock;

@@ -13,6 +13,10 @@ public class Civilization : ManagedBehaviour
     [SerializeField]
     private PoliciesArea policies;
 
+    public TechnologyArea Technologies => technologies;
+    [SerializeField]
+    private TechnologyArea technologies;
+
     [SerializeField]
     private LandGrid landGrid;
 
@@ -25,11 +29,19 @@ public class Civilization : ManagedBehaviour
     [FoldoutGroup("Debug"), SerializeField]
     private List<PolicyType> debugAddPolicies;
 
+    [FoldoutGroup("Debug"), SerializeField]
+    private List<TechnologyType> debugAddAvailableTech;
+
+    [FoldoutGroup("Debug"), SerializeField]
+    private List<TechnologyType> debugAddLearnedTech;
+
     private void Start()
     {
 #if UNITY_EDITOR
         debugAddResources.ForEach(x => resources.AddResourcePanel(x));
         debugAddPolicies.ForEach(x => AddPolicy(x));
+        debugAddAvailableTech.ForEach(x => technologies.AddTechnologyToAvailable(x));
+        debugAddLearnedTech.ForEach(x => technologies.AddTechnologyToLearned(x));
 #endif
     }
 

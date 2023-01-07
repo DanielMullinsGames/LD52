@@ -1474,6 +1474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359452678}
+  - component: {fileID: 359452679}
   m_Layer: 0
   m_Name: Tech
   m_TagString: Untagged
@@ -1504,6 +1505,26 @@ Transform:
   m_Father: {fileID: 620907865}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359452679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359452677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4b903939415724599a76a0a99a2d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableTechnogiesParent: {fileID: 153718705}
+  learnedTechnologiesParent: {fileID: 959836729}
+  availablePanelPrefab: {fileID: 7324752474144884737, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
+  learnedPanelPrefab: {fileID: 713361047819160007, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}
+  availablePosAnchor: {fileID: 148965765}
+  availableSpacing: 0.32
+  learnedPosAnchor: {fileID: 7457630621183621726}
+  learnedSpacing: 0.17
 --- !u!1001 &363658816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2197,10 +2218,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 800606529}
   policies: {fileID: 581141038}
+  technologies: {fileID: 359452679}
   landGrid: {fileID: 169318037}
   rulerView: {fileID: 2656398511706923768}
   debugAddResources: 02000000
   debugAddPolicies: 010000000100000001000000
+  debugAddAvailableTech: 0200000002000000
+  debugAddLearnedTech: 0100000001000000
 --- !u!1001 &624375152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8702,7 +8726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324752474144884736, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: -0.34000003
       objectReference: {fileID: 0}
     - target: {fileID: 7324752474144884736, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8742,7 +8766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7324752474144884737, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a88ab06fdc95e448d3c0429501b0e6, type: 3}
@@ -8768,7 +8792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713361047819160006, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31
+      value: -0.29000002
       objectReference: {fileID: 0}
     - target: {fileID: 713361047819160006, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8805,6 +8829,10 @@ PrefabInstance:
     - target: {fileID: 713361047819160007, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}
       propertyPath: m_Name
       value: TechnologyPanel_Learned
+      objectReference: {fileID: 0}
+    - target: {fileID: 713361047819160007, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad868d815a4d17e43a847e3807a0cdc5, type: 3}

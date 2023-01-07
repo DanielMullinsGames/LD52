@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: Agriculture
+  m_Name: Pottery
   m_EditorClassIdentifier: 
-  technologyType: 1
-  displayName: Agriculture
+  technologyType: 2
+  displayName: Pottery
   description: 
   icon: {fileID: 0}
   costTypes: 02000000
   costAmounts: 0a000000
-  policyUnlock: {fileID: 11400000, guid: 7ab1f679b193b974c9f6520a1d2470e6, type: 2}
-  resourceModification: 0
-  resourceMaxModification: 0
+  policyUnlock: {fileID: 0}
+  resourceModification: 1
+  resourceMaxModification: 100
   resourceRateModification: 0

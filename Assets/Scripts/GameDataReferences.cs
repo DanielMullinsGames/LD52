@@ -23,6 +23,12 @@ public static class GameDataReferences
         return policies.Find(x => x.policyType == policyType);
     }
 
+    public static List<TechnologyData> GetAllTechnology()
+    {
+        TryInitialize();
+        return technologies;
+    }
+
     public static TechnologyData GetTechnologyData(TechnologyType techType)
     {
         TryInitialize();

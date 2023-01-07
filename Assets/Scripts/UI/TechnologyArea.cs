@@ -6,6 +6,9 @@ public class TechnologyArea : ManagedBehaviour
 {
     public Tooltip tooltip;
 
+    private List<TechnologyData> learnedTech = new List<TechnologyData>();
+    private List<TechnologyData> availableTech = new List<TechnologyData>();
+
     [SerializeField]
     private Civilization civ;
 
@@ -39,6 +42,11 @@ public class TechnologyArea : ManagedBehaviour
     private List<TechnologyPanel> learnedPanels = new List<TechnologyPanel>();
     private List<TechnologyPurchasePanel> availablePanels = new List<TechnologyPurchasePanel>();
 
+    private void Start()
+    {
+        UpdateAvailableTech();
+    }
+
     public TechnologyPurchasePanel AddTechnologyToAvailable(TechnologyType techType)
     {
         var panelObj = Instantiate(availablePanelPrefab, availableTechnogiesParent);
@@ -66,11 +74,24 @@ public class TechnologyArea : ManagedBehaviour
         return panel;
     }
 
-    public void RemoveTechnologyFromAvailable(TechnologyPurchasePanel panel)
+    private void RemoveTechnologyFromAvailable(TechnologyPurchasePanel panel)
     {
         availablePanels.Remove(panel);
         Destroy(panel.gameObject);
         UpdatePanelPositions();
+    }
+
+    private void UpdateAvailableTech()
+    {
+        var allTech = GameDataReferences.GetAllTechnology();
+        foreach (var tech in allTech)
+        {
+            if (!availableTech.Contains(tech) && !learnedTech.Contains(tech) && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
+            {
+                availableTech.Add(tech);
+                AddTechnologyToAvailable(tech.technologyType);
+            }
+        }
     }
 
     private void OnAttemptPurchase(TechnologyPurchasePanel panel)
@@ -80,16 +101,22 @@ public class TechnologyArea : ManagedBehaviour
             PurchaseTechnology(panel);
         }
         else
-            // TODO show cannot afford
         {
+            // TODO show cannot afford
         }
     }
 
     private void PurchaseTechnology(TechnologyPurchasePanel panel)
     {
         activationManager.ActivateTech(panel);
+
         RemoveTechnologyFromAvailable(panel);
         AddTechnologyToLearned(panel.Data.technologyType);
+
+        availableTech.Remove(panel.Data);
+        learnedTech.Add(panel.Data);
+
+        UpdateAvailableTech();
     }
 
     private void UpdatePanelPositions()

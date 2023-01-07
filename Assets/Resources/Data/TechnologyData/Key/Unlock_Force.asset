@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
+  m_Name: Unlock_Force
+  m_EditorClassIdentifier: 
+  technologyType: 11
+  displayName: Conscription
+  specialDescription: 
+  icon: {fileID: 0}
+  costTypes: 020000000100000003000000
+  costAmounts:
+  - 10
+  - 50
+  - 50
+  policyUnlock: {fileID: 11400000, guid: 58333c56db0ffa148ace6b1396788042, type: 2}
+  resourceModification: 0
+  resourceMaxModification: 0
+  resourceRateModification: 0
+  prerequisites:
+  - {fileID: 11400000, guid: cdb94639205e4ba44b8bf5cbcfdc47ca, type: 2}

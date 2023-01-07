@@ -43,6 +43,8 @@ public class Civilization : ManagedBehaviour
         debugAddAvailableTech.ForEach(x => technologies.AddTechnologyToAvailable(x));
         debugAddLearnedTech.ForEach(x => technologies.AddTechnologyToLearned(x));
 #endif
+
+        resources.AddResourcePanel(ResourceType.People);
     }
 
     public void AddImprovement(TileImprovementType improvementType)

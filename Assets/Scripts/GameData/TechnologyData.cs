@@ -6,8 +6,35 @@ using Sirenix.OdinInspector;
 public enum TechnologyType
 {
     None,
-    Agriculture,
-    Pottery,
+    UnlockGrain,
+    GrainStorage1,
+    GrainStorage2,
+    GrainRate1,
+    GrainRate2,
+    UnlockFaith,
+    FaithStorage1,
+    FaithStorage2,
+    FaithRate1,
+    FaithRate2,
+    UnlockForce,
+    ForceStorage1,
+    ForceStorage2,
+    ForceRate1,
+    ForceRate2,
+    UnlockMoney,
+    MoneyStorage1,
+    MoneyStorage2,
+    MoneyRate1,
+    MoneyRate2,
+    UnlockKnowledge,
+    KnowledgeStorage1,
+    KnowledgeStorage2,
+    KnowledgeRate1,
+    KnowledgeRate2,
+    PeopleStorage1,
+    PeopleStorage2,
+    PeopleRate1,
+    PeopleRate2,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]
@@ -32,6 +59,9 @@ public class TechnologyData : ScriptableObject
     public float resourceMaxModification;
     [BoxGroup("Effects"), ShowIf("@resourceModification != ResourceType.None")]
     public float resourceRateModification;
+
+    [BoxGroup("PreRequisites")]
+    public List<TechnologyData> prerequisites = new List<TechnologyData>();
 
     public string GetDescription()
     {

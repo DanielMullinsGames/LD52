@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: Pottery
+  m_Name: Unlock_Money
   m_EditorClassIdentifier: 
-  technologyType: 2
-  displayName: Pottery
-  description: 
+  technologyType: 16
+  displayName: Mercantilism
+  specialDescription: 
   icon: {fileID: 0}
   costTypes: 0200000001000000
   costAmounts:
   - 10
-  - 10
-  policyUnlock: {fileID: 0}
-  resourceModification: 1
-  resourceMaxModification: 100
+  - 20
+  policyUnlock: {fileID: 11400000, guid: 931812866c43def41ade70f7ee76de57, type: 2}
+  resourceModification: 0
+  resourceMaxModification: 0
   resourceRateModification: 0
+  prerequisites:
+  - {fileID: 11400000, guid: 7c0d0c077752f91428538ed63fa47345, type: 2}

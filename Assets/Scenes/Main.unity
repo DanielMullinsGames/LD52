@@ -2242,9 +2242,9 @@ MonoBehaviour:
   technologies: {fileID: 359452679}
   landGrid: {fileID: 169318037}
   rulerView: {fileID: 2656398511706923768}
-  debugAddResources: 020000000100000003000000040000000500000006000000
-  debugAddPolicies: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
-  debugAddAvailableTech: 0100000002000000
+  debugAddResources: 
+  debugAddPolicies: 
+  debugAddAvailableTech: 
   debugAddLearnedTech: 
 --- !u!1001 &624375152
 PrefabInstance:
@@ -2546,8 +2546,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718677266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64000005, y: -1.88, z: 0}
-  m_LocalScale: {x: 1, y: 188, z: 1}
+  m_LocalPosition: {x: -0.64000005, y: -2.67, z: 0}
+  m_LocalScale: {x: 1, y: 267, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 359452678}
@@ -4498,7 +4498,7 @@ Transform:
   m_GameObject: {fileID: 1067764224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.5, y: -0.01000005, z: 0}
-  m_LocalScale: {x: 500, y: 1, z: 1}
+  m_LocalScale: {x: 344.55002, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 581141037}
@@ -5553,7 +5553,7 @@ Transform:
   m_GameObject: {fileID: 1369098336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.5, y: -0.09000003, z: 0}
-  m_LocalScale: {x: 500, y: 8, z: 1}
+  m_LocalScale: {x: 344.55002, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 581141037}
@@ -7604,7 +7604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -1.4599999
       objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713151, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_AnchoredPosition.y

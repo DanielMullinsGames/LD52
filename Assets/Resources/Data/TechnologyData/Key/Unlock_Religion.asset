@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
+  m_Name: Unlock_Religion
+  m_EditorClassIdentifier: 
+  technologyType: 6
+  displayName: Religion
+  specialDescription: 
+  icon: {fileID: 0}
+  costTypes: 0200000001000000
+  costAmounts:
+  - 15
+  - 10
+  policyUnlock: {fileID: 11400000, guid: af22e93d43ee78a4d98ead23b124f2cc, type: 2}
+  resourceModification: 0
+  resourceMaxModification: 0
+  resourceRateModification: 0
+  prerequisites:
+  - {fileID: 11400000, guid: 7c0d0c077752f91428538ed63fa47345, type: 2}

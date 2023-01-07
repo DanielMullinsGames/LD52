@@ -16,6 +16,9 @@ public class Civilization : ManagedBehaviour
     [SerializeField]
     private LandGrid landGrid;
 
+    [SerializeField]
+    private RulerView rulerView;
+
     [FoldoutGroup("Debug"), SerializeField]
     private List<ResourceType> debugAddResources;
 
@@ -46,5 +49,6 @@ public class Civilization : ManagedBehaviour
         float timeStep = Time.deltaTime;
         resources.TickResources(timeStep);
         policies.TickCooldowns(timeStep);
+        rulerView.TickAge(timeStep);
     }
 }

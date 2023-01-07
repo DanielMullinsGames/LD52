@@ -465,7 +465,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 84
-        y: 50
+        y: 49
         width: 34
         height: 14
       alignment: 2
@@ -486,7 +486,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 32
+        y: 31
         width: 34
         height: 14
       alignment: 2
@@ -498,6 +498,27 @@ TextureImporter:
       bones: []
       spriteID: 3728ce072afbc52419f515e7827badbe
       internalID: 1289161416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earth_rulers_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 19
+        width: 34
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d2cb9d473dd334490fad849fbf9725
+      internalID: 1396678754
       vertices: []
       indices: 
       edges: []
@@ -518,6 +539,7 @@ TextureImporter:
       earth_rulers_sheet_0: 719603514
       earth_rulers_sheet_5: 507719716
       earth_rulers_sheet_12: 213470244
+      earth_rulers_sheet_19: 1396678754
       earth_rulers_sheet_14: 1698215275
       earth_rulers_sheet_17: -1948117481
       earth_rulers_sheet_11: -865233854

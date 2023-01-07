@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PolicyPanel : ManagedBehaviour
+public class PolicyPanel : Interactable2D
 {
     public System.Action<PolicyPanel> Activated;
     public PolicyData Data { get; private set; }
@@ -67,6 +67,11 @@ public class PolicyPanel : ManagedBehaviour
         {
             Activate();
         }
+    }
+
+    protected override void OnCursorSelectStart()
+    {
+        Activate();
     }
 
     private void Activate()

@@ -16,6 +16,7 @@ public class PixelText : MonoBehaviour
     private Text uiText = default;
 
     public bool doNotModifyForPlanet;
+    public Font alienFont;
 
     [Title("Font")]
     [SerializeField]
@@ -32,55 +33,57 @@ public class PixelText : MonoBehaviour
 
     private void Start()
     {
-        if (IsRoboScene() || IsLavaScene())
+        if (IsRoboScene())
         {
             SetText(UIText.text);
+        }
+        else if (IsLavaScene())
+        {
+            uiText.font = alienFont;
         }
     }
 
     public void SetText(string text)
     {
-        if (IsRoboScene() && !doNotModifyForPlanet)
+        if (!doNotModifyForPlanet)
         {
-            string newText = "";
-            bool skipBracketCode = false;
-            for (int i = 0; i < text.Length; i++)
+            if (IsRoboScene())
             {
-                if (text[i] == '<')
+                string newText = "";
+                bool skipBracketCode = false;
+                for (int i = 0; i < text.Length; i++)
                 {
-                    newText += text[i];
-                    skipBracketCode = true;
-                    continue;
+                    if (text[i] == '<')
+                    {
+                        newText += text[i];
+                        skipBracketCode = true;
+                        continue;
+                    }
+                    else if (text[i] == '>')
+                    {
+                        newText += text[i];
+                        skipBracketCode = false;
+                        continue;
+                    }
+                    else if (skipBracketCode)
+                    {
+                        newText += text[i];
+                        continue;
+                    }
+                    else if (System.Char.IsDigit(text[i]))
+                    {
+                        newText += text[i];
+                    }
+                    else
+                    {
+                        newText += ".";
+                    }
                 }
-                else if (text[i] == '>')
-                {
-                    newText += text[i];
-                    skipBracketCode = false;
-                    continue;
-                }
-                else if (skipBracketCode)
-                {
-                    newText += text[i];
-                    continue;
-                }
-                else if (System.Char.IsDigit(text[i]))
-                {
-                    newText += text[i];
-                }
-                else
-                {
-                    newText += ".";
-                }
+                text = newText;
             }
-            text = newText;
         }
 
         uiText.text = text;
-        
-        if (switchFontIfTruncated)
-        {
-            UIText.font = IsTruncated(text) ? truncatedFontSwitch : defaultFont;
-        }
 
         TextChanged?.Invoke(text);
     }

@@ -73,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 6738841716831009136}
+  doNotModifyForPlanet: 0
+  alienFont: {fileID: 12800000, guid: 9259bcddde538ab4582d33a6fe315f69, type: 2}
   switchFontIfTruncated: 0
   defaultFont: {fileID: 0}
   truncatedFontSwitch: {fileID: 0}

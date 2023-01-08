@@ -23,7 +23,7 @@ MonoBehaviour:
   policyUnlock: {fileID: 0}
   resourceModification: 2
   resourceMaxModification: 0
-  resourceRateModification: 1
+  resourceRateModification: 0.5
   prerequisites:
   - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
   civPrereq: 0

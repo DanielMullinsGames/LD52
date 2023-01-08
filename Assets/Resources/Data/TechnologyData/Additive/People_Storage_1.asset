@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: People_Rate_1
+  m_Name: People_Storage_1
   m_EditorClassIdentifier: 
-  technologyType: 28
-  displayName: Missionaries
+  technologyType: 26
+  displayName: Tenements
   specialDescription: 
   icon: {fileID: 0}
-  costTypes: 0200000003000000
+  costTypes: 0200000004000000
   costAmounts:
-  - 2
   - 20
+  - 75
   policyUnlock: {fileID: 0}
   resourceModification: 2
-  resourceMaxModification: 0
-  resourceRateModification: 0.5
+  resourceMaxModification: 40
+  resourceRateModification: 0
   prerequisites:
-  - {fileID: 11400000, guid: cdb94639205e4ba44b8bf5cbcfdc47ca, type: 2}
+  - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
   civPrereq: 0

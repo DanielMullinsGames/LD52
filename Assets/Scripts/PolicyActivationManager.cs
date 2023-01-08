@@ -7,12 +7,23 @@ public class PolicyActivationManager : ManagedBehaviour
     [SerializeField]
     private Civilization civ = default;
 
-    public void ActivatePolicy(PolicyPanel panel)
+    private bool doubleNextEffect;
+
+    public void ActivatePolicy(PolicyPanel panel, bool noCost = false)
     {
-        // Pay cost
-        for (int i = 0; i < panel.Data.costTypes.Count; i++)
+        if (doubleNextEffect)
         {
-            civ.Resources.GetOrCreateResource(panel.Data.costTypes[i]).PayCost(panel.Data.costAmounts[i]);
+            doubleNextEffect = false;
+            CustomCoroutine.WaitThenExecute(0.25f, () => ActivatePolicy(panel, noCost: true));
+        }
+
+        // Pay cost
+        if (!noCost)
+        {
+            for (int i = 0; i < panel.Data.costTypes.Count; i++)
+            {
+                civ.Resources.GetOrCreateResource(panel.Data.costTypes[i]).PayCost(panel.Data.costAmounts[i]);
+            }
         }
 
         // Basic effects
@@ -44,6 +55,9 @@ public class PolicyActivationManager : ManagedBehaviour
                 civ.Resources.GetOrCreateResource(ResourceType.Money).Amount += 50;
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Rate += 1;
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Amount += 25;
+                break;
+            case PolicyType.DoubleEffect:
+                doubleNextEffect = true;
                 break;
         }
     }

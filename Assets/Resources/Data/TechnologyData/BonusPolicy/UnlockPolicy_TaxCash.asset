@@ -26,4 +26,4 @@ MonoBehaviour:
   prerequisites:
   - {fileID: 11400000, guid: 67c98aaa8dee4144497491e38167ba99, type: 2}
   - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
-  civPrereq: 0
+  civPrereq: 2

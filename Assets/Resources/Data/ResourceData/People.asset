@@ -24,3 +24,7 @@ MonoBehaviour:
     displayName: ....
     sprite: {fileID: 1229640909, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
     color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  - civ: 6
+    displayName: People
+    sprite: {fileID: -1329117847, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+    color: {r: 0.5754717, g: 0.44782284, b: 0.36048415, a: 1}

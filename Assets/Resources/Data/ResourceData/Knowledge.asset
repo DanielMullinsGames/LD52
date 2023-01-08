@@ -24,3 +24,7 @@ MonoBehaviour:
     displayName: ....
     sprite: {fileID: 1229640909, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
     color: {r: 0.3339622, g: 0.3339622, b: 1, a: 1}
+  - civ: 6
+    displayName: Wisdom
+    sprite: {fileID: 1995641504, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+    color: {r: 0.65882355, g: 0.7372549, b: 0.87843144, a: 1}

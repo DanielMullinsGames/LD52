@@ -37,6 +37,7 @@ public class PolicyActivationManager : ManagedBehaviour
             }
 
             civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
+            civ.Resources.GetOrCreateResource(panel.Data.resourceModification).ShowRateUp();
         }
 
         // Special effects
@@ -58,9 +59,11 @@ public class PolicyActivationManager : ManagedBehaviour
                 break;
             case PolicyType.War:
                 civ.Resources.GetOrCreateResource(ResourceType.Money).Rate += 1;
+                civ.Resources.GetOrCreateResource(ResourceType.Money).ShowRateUp();
                 civ.Resources.GetOrCreateResource(ResourceType.Money).Amount += 50;
                 civ.Resources.GetOrCreateResource(ResourceType.Money).ShowGain(50);
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Rate += 1;
+                civ.Resources.GetOrCreateResource(ResourceType.Knowledge).ShowRateUp();
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Amount += 25;
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).ShowGain(25);
                 break;

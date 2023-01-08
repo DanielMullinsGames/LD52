@@ -347,6 +347,12 @@ MonoBehaviour:
   rateText: {fileID: 6748487370108572379}
   barRenderer: {fileID: 8461090277891526108}
   maxBarLength: 102
+  borderRenderers:
+  - {fileID: 8461090276863207245}
+  - {fileID: 8461090277931768819}
+  - {fileID: 8461090277107157604}
+  fadedColor: {r: 0.99607843, g: 0.9607843, b: 0.9372549, a: 0.27058825}
+  borderColor: {r: 0.99607843, g: 0.9607843, b: 0.9372549, a: 1}
 --- !u!61 &2542113082129418605
 BoxCollider2D:
   m_ObjectHideFlags: 0

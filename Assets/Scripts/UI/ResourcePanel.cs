@@ -41,6 +41,10 @@ public class ResourcePanel : InteractablePanel
     private ResourcesArea area;
     private int lastFrameAmount;
 
+    public List<SpriteRenderer> borderRenderers = new List<SpriteRenderer>();
+    public Color fadedColor;
+    public Color borderColor;
+
     public void Initialize(ResourceData data, ResourcesArea area)
     {
         this.area = area;
@@ -55,6 +59,13 @@ public class ResourcePanel : InteractablePanel
         nameText.SetText(Data.GetSkinnedName(area.civ.type));
         iconRenderer.sprite = Data.GetSkinnedIcon(area.civ.type);
         UpdateDisplay();
+    }
+
+    public void ShowRateUp()
+    {
+        CustomCoroutine.FlickerSequence(() => borderRenderers.ForEach(x => x.color = borderColor), 
+            () => borderRenderers.ForEach(x => x.color = fadedColor), 
+            false, true, 0.1f, 3);
     }
 
     public void TickResource(float timeStep)

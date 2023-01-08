@@ -28,6 +28,11 @@ public class TechnologyActivationManager : ManagedBehaviour
         {
             civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Maximum += panel.Data.resourceMaxModification;
             civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
+
+            if (panel.Data.resourceRateModification > 0f)
+            {
+                civ.Resources.GetResource(panel.Data.resourceModification).ShowRateUp();
+            }
         }
 
         // Special effects

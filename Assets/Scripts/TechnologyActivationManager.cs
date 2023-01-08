@@ -48,6 +48,13 @@ public class TechnologyActivationManager : ManagedBehaviour
                     planetCiv.Resources.GetResource(ResourceType.Boba).Rate += 0.1f;
                 }
                 break;
+            case TechnologyType.MoneyRate1:
+            case TechnologyType.MoneyRate2:
+                if (civ.type == CivType.Lava || civ.type == CivType.Robo)
+                {
+                    civ.Resources.GetOrCreateResource(ResourceType.Money).Rate += 0.5f;
+                }
+                break;
             default:
                 break;
         }

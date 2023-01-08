@@ -5351,6 +5351,10 @@ PrefabInstance:
       propertyPath: isPlanet
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: resourceRateMultiplier
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7982744973687897345, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5995,11 +5999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: type
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: cooldownMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: resourceRateMultiplier

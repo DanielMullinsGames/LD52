@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: resourceRateMultiplier
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973687897347, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: m_Color.b

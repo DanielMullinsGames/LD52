@@ -43,6 +43,11 @@ public class CivilizationManager : Singleton<CivilizationManager>
         currentCivs.AddRange(startingCivs);
         tabs.ForEach(x => x.CursorSelectStarted += (Interactable i) => OnTabClicked(i.GetComponent<CivTab>()));
 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Earth")
+        {
+            OnTabClicked(tabs[0]);
+        }
+
 #if UNITY_EDITOR
         if (debugUnlockCivs)
         {

@@ -94,9 +94,9 @@ public class ResourcePanel : InteractablePanel
         text.SetColor(Data.GetSkinnedColor(area.civ.type));
 
         text.transform.localPosition = new Vector2(-0.2f + Random.value * 0.4f, text.transform.localPosition.y);
-        Tween.Position(text.transform, text.transform.position + Vector3.up * 0.15f, 0.3f, 0f, Tween.EaseOut);
-        Tween.LocalScale(text.transform, Vector3.zero, 0.1f, 0.3f, Tween.EaseIn);
-        Destroy(obj, 0.45f);
+        Tween.Position(text.transform, text.transform.position + Vector3.up * 0.15f, 0.4f, 0f, Tween.EaseOut);
+        Tween.LocalScale(text.transform, Vector3.zero, 0.1f, 0.4f, Tween.EaseIn);
+        Destroy(obj, 0.55f);
     }
 
     private void UpdateDisplay()

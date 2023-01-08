@@ -24,6 +24,7 @@ public class BobaMiningAnim : ManagedBehaviour
     {
         if (civ.Technologies.Learned(TechnologyType.UnlockBoba))
         {
+            ResetSortLayerKeyframe();
             GetComponent<Animator>().Play("harvest", 0, 0.5f + (Random.value * 0.5f));
         }
     }

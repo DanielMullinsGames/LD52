@@ -20,7 +20,7 @@ MonoBehaviour:
   baseCooldown: 30
   costTypes: 04000000
   costAmounts:
-  - 25
+  - 10
   resourceModification: 0
   resourceAmountModification: 0
   resourceRateModification: 0

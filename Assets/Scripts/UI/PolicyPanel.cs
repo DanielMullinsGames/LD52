@@ -93,7 +93,7 @@ public class PolicyPanel : InteractablePanel
             Tween.LocalPosition(anim, Vector2.up * 0.03f, 0.05f, 0f, Tween.EaseOut);
             Tween.LocalPosition(anim, Vector2.zero, 0.2f, 0.1f, Tween.EaseIn);
 
-            // ACTIVATE SOUND
+            AudioController.Instance.PlaySound2D("activate_decree", 1f, 0f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
 
             Activated?.Invoke(this);
             cooldownTimer = Cooldown;
@@ -102,7 +102,7 @@ public class PolicyPanel : InteractablePanel
         {
             Tween.Shake(anim, Vector2.zero, new Vector2(0.02f, 0.02f), 0.25f, 0f);
 
-            //NEGATE SOUND
+            AudioController.Instance.PlaySound2D("negate", 1f, 0f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
         }
         UpdateDisplay();
     }

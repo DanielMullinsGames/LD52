@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 public class TechnologyArea : ManagedBehaviour
 {
@@ -111,12 +112,14 @@ public class TechnologyArea : ManagedBehaviour
         }
         else
         {
-            // TODO show cannot afford
+            Tween.Shake(panel.anim, Vector2.zero, new Vector2(0.02f, 0.02f), 0.25f, 0f);
+            AudioController.Instance.PlaySound2D("negate", 1f, 0f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
         }
     }
 
     private void PurchaseTechnology(TechnologyPurchasePanel panel)
     {
+        AudioController.Instance.PlaySound2D("purchase_technology", 1f, 0f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));
         activationManager.ActivateTech(panel);
 
         RemoveTechnologyFromAvailable(panel);

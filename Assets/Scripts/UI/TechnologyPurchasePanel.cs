@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TechnologyPurchasePanel : TechnologyPanel
 {
+    public Transform anim;
+
     [SerializeField]
     private List<SpriteRenderer> costIcons;
 

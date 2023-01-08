@@ -36,6 +36,7 @@ public enum TechnologyType
     PeopleRate1,
     PeopleRate2,
     ExportBoba,
+    ExportTest,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]

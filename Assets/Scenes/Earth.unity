@@ -6368,6 +6368,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4435535612146568211, guid: cdf7b923a7e07bc488d6772feca5e64b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435535613057253507, guid: cdf7b923a7e07bc488d6772feca5e64b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435535613816289520, guid: cdf7b923a7e07bc488d6772feca5e64b, type: 3}
+      propertyPath: debugUnlockCivs
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4435535613816289520, guid: cdf7b923a7e07bc488d6772feca5e64b, type: 3}
       propertyPath: startingCivs.Array.data[0]
       value: 

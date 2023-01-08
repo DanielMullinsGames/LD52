@@ -33,29 +33,37 @@ public class TechnologyActivationManager : ManagedBehaviour
             case TechnologyType.GrainRate1:
                 civ.Resources.GetOrCreateResource(ResourceType.Grain).Rate += civ.Grid.GetNumImprovementsOfType(TileImprovementType.Farm) * 0.1f;
                 break;
+            case TechnologyType.ExportTest:
             case TechnologyType.ExportBoba:
-                PlayerPrefs.SetInt("boba", 1);
-
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Earth")
-                {
-                    string path = Application.dataPath + "/../BOBA.exe";
-
-                    PlayerPrefs.SetInt("launchscene", 1);
-                    System.Diagnostics.Process.Start(path);
-
-                    PlayerPrefs.SetInt("launchscene", 2);
-                    System.Diagnostics.Process.Start(path);
-
-                    PlayerPrefs.SetInt("launchscene", 3);
-                    System.Diagnostics.Process.Start(path);
-
-                    PlayerPrefs.SetInt("launchscene", 0);
-                }
-                
-                Application.Quit();
+                PlayerCursor.instance.DisableInput.Add(this);
+                StartCoroutine(ExportSequence());
                 break;
             default:
                 break;
         }
+    }
+
+    private IEnumerator ExportSequence()
+    {
+        PlayerPrefs.SetInt("boba", 1);
+
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Earth")
+        {
+            string path = Application.dataPath + "/../BOBA.exe";
+
+            PlayerPrefs.SetInt(SceneLoader.SCENE_PLAYERPREF, 1);
+            System.Diagnostics.Process.Start(path);
+            yield return new WaitUntil(() => PlayerPrefs.GetInt(SceneLoader.SCENE_PLAYERPREF) == 0);
+
+            PlayerPrefs.SetInt(SceneLoader.SCENE_PLAYERPREF, 2);
+            System.Diagnostics.Process.Start(path);
+            yield return new WaitUntil(() => PlayerPrefs.GetInt(SceneLoader.SCENE_PLAYERPREF) == 0);
+
+            PlayerPrefs.SetInt(SceneLoader.SCENE_PLAYERPREF, 3);
+            System.Diagnostics.Process.Start(path);
+            yield return new WaitUntil(() => PlayerPrefs.GetInt(SceneLoader.SCENE_PLAYERPREF) == 0);
+        }
+
+        Application.Quit();
     }
 }

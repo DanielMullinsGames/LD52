@@ -19,6 +19,12 @@ public class CivilizationManager : Singleton<CivilizationManager>
     private List<Civilization> currentCivs = new List<Civilization>();
 
     [SerializeField]
+    private GameObject singleCivParent;
+
+    [SerializeField]
+    private GameObject tabsParent;
+
+    [SerializeField]
     private List<CivTab> tabs;
 
     [SerializeField]
@@ -44,6 +50,9 @@ public class CivilizationManager : Singleton<CivilizationManager>
 
     public void UnlockAll()
     {
+        singleCivParent.gameObject.SetActive(false);
+        tabsParent.gameObject.SetActive(true);
+
         currentCivs.AddRange(unlockedCivs);
         OnTabClicked(tabs[0]);
     }

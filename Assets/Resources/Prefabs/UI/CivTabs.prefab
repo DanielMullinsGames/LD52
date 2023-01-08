@@ -374,6 +374,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  singleCivParent: {fileID: 4435535612146568211}
+  tabsParent: {fileID: 4435535613057253507}
   tabs:
   - {fileID: 6481850663212850009}
   - {fileID: 8844063756814928791}

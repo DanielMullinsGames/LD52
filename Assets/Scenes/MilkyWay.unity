@@ -10109,7 +10109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unscaledTime: 0
-  originalFrequency: 2
+  originalFrequency: 5
   volatility: 0
   straw: {fileID: 362955216}
   allBobas:

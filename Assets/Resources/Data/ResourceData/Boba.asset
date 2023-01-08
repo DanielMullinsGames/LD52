@@ -18,4 +18,5 @@ MonoBehaviour:
   sprite: {fileID: 1229640909, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
   baseAmount: 0
   baseRate: 0.1
-  baseMaximum: 100
+  baseMaximum: 10
+  reskins: []

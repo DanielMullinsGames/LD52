@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Earth.unity
     guid: c888fac9a9c8b2a4280b5acfbe72713b
+  - enabled: 1
+    path: Assets/Scenes/MilkyWay.unity
+    guid: fb0ff3e82f14e8447b26bfda22a95332
+  - enabled: 1
+    path: Assets/Scenes/Thanks.unity
+    guid: f6d850e44e5da7846b0b6515ce4052b6
   m_configObjects: {}

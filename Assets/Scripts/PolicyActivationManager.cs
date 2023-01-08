@@ -30,6 +30,12 @@ public class PolicyActivationManager : ManagedBehaviour
         if (panel.Data.resourceModification != ResourceType.None)
         {
             civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Amount += panel.Data.resourceAmountModification;
+
+            if (panel.Data.resourceAmountModification > 0f)
+            {
+                //civ.Resources.GetResource(panel.Data.resourceModification).ShowGain(panel.Data.resourceAmountModification);
+            }
+
             civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
         }
 
@@ -53,8 +59,10 @@ public class PolicyActivationManager : ManagedBehaviour
             case PolicyType.War:
                 civ.Resources.GetOrCreateResource(ResourceType.Money).Rate += 1;
                 civ.Resources.GetOrCreateResource(ResourceType.Money).Amount += 50;
+                //civ.Resources.GetOrCreateResource(ResourceType.Money).ShowGain(50);
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Rate += 1;
                 civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Amount += 25;
+                //civ.Resources.GetOrCreateResource(ResourceType.Knowledge).ShowGain(25);
                 break;
             case PolicyType.DoubleEffect:
                 doubleNextEffect = true;

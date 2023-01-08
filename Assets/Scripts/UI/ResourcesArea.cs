@@ -65,6 +65,18 @@ public class ResourcesArea : ManagedBehaviour
         return panel;
     }
 
+    public void ShowCannotAfford(List<ResourceType> costTypes, List<float> costAmounts)
+    {
+        for (int i = 0; i < costTypes.Count; i++)
+        {
+            var resPanel = GetResource(costTypes[i]);
+            if (resPanel != null && resPanel.Amount < costAmounts[i])
+            {
+                resPanel.ShowCannotAfford();
+            }
+        }
+    }
+
     public override void ManagedUpdate()
     {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.F))

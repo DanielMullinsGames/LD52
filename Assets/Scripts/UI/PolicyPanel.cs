@@ -100,6 +100,11 @@ public class PolicyPanel : InteractablePanel
         }
         else
         {
+            if (OffCooldown && !civ.Resources.CanAffordCost(Data.costTypes, Data.costAmounts))
+            {
+                civ.Resources.ShowCannotAfford(Data.costTypes, Data.costAmounts);
+            }
+
             Tween.Shake(anim, Vector2.zero, new Vector2(0.02f, 0.02f), 0.25f, 0f);
 
             AudioController.Instance.PlaySound2D("negate", 1f, 0f, pitch: new AudioParams.Pitch(AudioParams.Pitch.Variation.Small));

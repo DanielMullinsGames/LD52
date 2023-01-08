@@ -100,6 +100,11 @@ public class RulerView : ManagedBehaviour
 
     public void TickAge(float timeStep)
     {
+        if (currentRuler == null)
+        {
+            return;
+        }
+
         currentRuler.age += timeStep * 5f;
 
         float deathChance = 0f;

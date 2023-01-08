@@ -24,6 +24,10 @@ public class Civilization : ManagedBehaviour
     [SerializeField]
     private RulerView rulerView;
 
+    public bool IsPlanet => isPlanet;
+    [SerializeField]
+    private bool isPlanet;
+
     [FoldoutGroup("Debug"), SerializeField]
     private List<ResourceType> debugAddResources;
 
@@ -45,7 +49,14 @@ public class Civilization : ManagedBehaviour
         debugAddLearnedTech.ForEach(x => technologies.AddTechnologyToLearned(x));
 #endif
 
-        resources.AddResourcePanel(ResourceType.People);
+        if (isPlanet)
+        {
+            resources.AddResourcePanel(ResourceType.Boba);
+        }
+        else 
+        {
+            resources.AddResourcePanel(ResourceType.People);
+        }
     }
 
     public void AddImprovement(TileImprovementType improvementType)

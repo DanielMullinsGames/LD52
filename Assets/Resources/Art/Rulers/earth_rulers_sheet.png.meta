@@ -523,6 +523,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: earth_rulers_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 72
+        width: 30
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecbe9d6f28277c46b5ec58ed66e3f19
+      internalID: -1950759590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earth_rulers_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 61
+        width: 28
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a04a5129abd9be4a932b0f50499fd79
+      internalID: -1174809936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earth_rulers_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 44
+        width: 30
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fae0591090db9c4eae762cfdbf484c8
+      internalID: 782222766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: earth_rulers_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 19
+        width: 34
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d0f74a29aaefc40b4f606795cce5c0
+      internalID: 973523972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -545,11 +629,15 @@ TextureImporter:
       earth_rulers_sheet_11: -865233854
       earth_rulers_sheet_16: 1890153636
       earth_rulers_sheet_15: -286001419
+      earth_rulers_sheet_23: 973523972
+      earth_rulers_sheet_21: -1174809936
       earth_rulers_sheet_9: 1398419476
       earth_rulers_sheet_10: 1420224906
+      earth_rulers_sheet_20: -1950759590
       earth_rulers_sheet_13: -442423875
       earth_rulers_sheet_1: 139279627
       earth_rulers_sheet_8: -1801547507
+      earth_rulers_sheet_22: 782222766
       earth_rulers_sheet_2: -1193014931
       earth_rulers_sheet_4: 2022296939
       earth_rulers_sheet_7: 1161525888

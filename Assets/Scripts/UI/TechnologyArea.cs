@@ -93,6 +93,11 @@ public class TechnologyArea : ManagedBehaviour
         {
             if (availableTech.Count < 7 && !availableTech.Contains(tech) && !learnedTech.Contains(tech) && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
             {
+                if (civ.IsPlanet && tech.technologyType == TechnologyType.UnlockGrain)
+                {
+                    return;
+                }
+
                 availableTech.Add(tech);
                 AddTechnologyToAvailable(tech.technologyType);
             }

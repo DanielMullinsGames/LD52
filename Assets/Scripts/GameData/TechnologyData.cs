@@ -35,6 +35,7 @@ public enum TechnologyType
     PeopleStorage2,
     PeopleRate1,
     PeopleRate2,
+    ExportBoba,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]
@@ -62,6 +63,7 @@ public class TechnologyData : ScriptableObject
 
     [BoxGroup("PreRequisites")]
     public List<TechnologyData> prerequisites = new List<TechnologyData>();
+    public CivType civPrereq;
 
     public string GetDescription(CivType civ)
     {

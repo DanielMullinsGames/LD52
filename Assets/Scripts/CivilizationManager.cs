@@ -8,6 +8,7 @@ public enum CivType
     Nile,
     Yangtze,
     Zana,
+    Planet,
 }
 
 public class CivilizationManager : Singleton<CivilizationManager>

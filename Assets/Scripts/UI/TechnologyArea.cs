@@ -91,9 +91,11 @@ public class TechnologyArea : ManagedBehaviour
         var allTech = GameDataReferences.GetAllTechnology();
         foreach (var tech in allTech)
         {
-            if (availableTech.Count < 7 && !availableTech.Contains(tech) && !learnedTech.Contains(tech) && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
+            if (availableTech.Count < 7 && (tech.civPrereq == CivType.None || tech.civPrereq == civ.type)
+                && !availableTech.Contains(tech) && !learnedTech.Contains(tech) 
+                && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
             {
-                if (civ.IsPlanet && tech.technologyType == TechnologyType.UnlockGrain)
+                if (civ.type == CivType.Planet && tech.technologyType == TechnologyType.UnlockGrain)
                 {
                     return;
                 }

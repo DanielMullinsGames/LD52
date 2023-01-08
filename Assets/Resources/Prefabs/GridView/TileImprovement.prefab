@@ -130,3 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   improvementType: 0
+  sr: {fileID: 5602961084054538322}
+  civs: 
+  sprites: []

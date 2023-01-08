@@ -44,12 +44,12 @@ public class LandGrid : ManagedBehaviour
     }
 #endif
 
-    public void AddImprovementToRandomTile(TileImprovementType improvementType)
+    public void AddImprovementToRandomTile(TileImprovementType improvementType, CivType civ)
     {
         var openTiles = tiles.FindAll(x => x.gameObject.activeSelf && x.Improvement == TileImprovementType.None);
         if (openTiles.Count > 0)
         {
-            openTiles[Random.Range(0, openTiles.Count)].AddImprovement(improvementType);
+            openTiles[Random.Range(0, openTiles.Count)].AddImprovement(improvementType, civ);
         }
     }
 

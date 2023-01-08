@@ -8,9 +8,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: civs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
       propertyPath: improvementType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: civs.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: civs.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: sprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -53613409, guid: 9117f32841f6f1f4aa5d6c3af82f4930, type: 3}
+    - target: {fileID: 181285562171820741, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 592081703, guid: 9117f32841f6f1f4aa5d6c3af82f4930, type: 3}
     - target: {fileID: 5602961084054538322, guid: b718a6319d73cb345a03ecfb38884b16, type: 3}
       propertyPath: m_Size.x
       value: 0.08

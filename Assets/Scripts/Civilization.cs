@@ -78,7 +78,7 @@ public class Civilization : ManagedBehaviour
 
     public void AddImprovement(TileImprovementType improvementType)
     {
-        landGrid.AddImprovementToRandomTile(improvementType);
+        landGrid.AddImprovementToRandomTile(improvementType, type);
     }
 
     public void Tick(float timeStep)

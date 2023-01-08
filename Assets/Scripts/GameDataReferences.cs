@@ -35,7 +35,7 @@ public static class GameDataReferences
         return technologies.Find(x => x.technologyType == techType);
     }
 
-    public static GameObject GetTimeImprovementPrefab(TileImprovementType tileType)
+    public static GameObject GetTileImprovementPrefab(TileImprovementType tileType)
     {
         TryInitialize();
         return tileImprovementPrefabs.Find(x => x.GetComponent<TileImprovement>().ImprovementType == tileType);

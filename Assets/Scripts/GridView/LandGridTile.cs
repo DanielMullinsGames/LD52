@@ -9,12 +9,14 @@ public class LandGridTile : ManagedBehaviour
 
     public TileImprovementType Improvement { get; private set; }
 
-    public void AddImprovement(TileImprovementType improvementType)
+    public void AddImprovement(TileImprovementType improvementType, CivType civ)
     {
         Improvement = improvementType;
-        var prefab = GameDataReferences.GetTimeImprovementPrefab(improvementType);
+        var prefab = GameDataReferences.GetTileImprovementPrefab(improvementType);
         var obj = Instantiate(prefab, transform);
         obj.transform.localPosition = Vector2.zero;
+
+        obj.GetComponent<TileImprovement>().SetCiv(civ);
 
         ScreenShake.instance.AddIntensity(3f);
     }

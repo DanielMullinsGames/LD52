@@ -53,6 +53,8 @@ public class CivilizationManager : Singleton<CivilizationManager>
     {
         if (!didUnlock && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Earth")
         {
+            AudioController.Instance.SetLoopAndPlay("earth");
+
             singleCivParent.gameObject.SetActive(false);
             tabsParent.gameObject.SetActive(true);
 

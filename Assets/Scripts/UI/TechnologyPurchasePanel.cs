@@ -13,6 +13,10 @@ public class TechnologyPurchasePanel : TechnologyPanel
     [SerializeField]
     private List<PixelText> costTexts;
 
+    public SpriteRenderer border;
+    public Color cantAfford;
+    public Color afford;
+
     public override void Initialize(TechnologyData data, TechnologyArea area)
     {
         base.Initialize(data, area);
@@ -34,5 +38,10 @@ public class TechnologyPurchasePanel : TechnologyPanel
 
         anim.transform.localPosition += Vector3.right;
         Tween.LocalPosition(anim.transform, Vector3.zero, 0.25f, 0f, Tween.EaseOutStrong);
+    }
+
+    public override void ManagedUpdate()
+    {
+        border.color = area.civ.Resources.CanAffordCost(Data.costTypes, Data.costAmounts) ? afford : cantAfford;
     }
 }

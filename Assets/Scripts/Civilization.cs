@@ -66,6 +66,14 @@ public class Civilization : ManagedBehaviour
         {
             resources.AddResourcePanel(ResourceType.People);
         }
+
+        if (type == CivType.Lava || type == CivType.Robo)
+        {
+            technologies.AddTechnologyToAvailable(TechnologyType.UnlockBoba);
+            resources.GetOrCreateResource(ResourceType.Knowledge).Rate += 0.2f;
+            resources.GetOrCreateResource(ResourceType.Force).Rate += 0.2f;
+            resources.GetOrCreateResource(ResourceType.Force).Maximum += 50f;
+        }
     }
 
     public void AddImprovement(TileImprovementType improvementType)

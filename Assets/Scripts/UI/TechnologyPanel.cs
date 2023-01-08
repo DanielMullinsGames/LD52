@@ -13,7 +13,7 @@ public class TechnologyPanel : InteractablePanel
     [SerializeField]
     private PixelText nameText;
 
-    private TechnologyArea area;
+    protected TechnologyArea area;
 
     public virtual void Initialize(TechnologyData data, TechnologyArea area)
     {

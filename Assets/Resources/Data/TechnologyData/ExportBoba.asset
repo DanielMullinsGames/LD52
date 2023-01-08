@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExportBoba
   m_EditorClassIdentifier: 
   technologyType: 30
-  displayName: Export
+  displayName: Harvest
   specialDescription: Export your Boba
   icon: {fileID: 0}
   costTypes: 07000000

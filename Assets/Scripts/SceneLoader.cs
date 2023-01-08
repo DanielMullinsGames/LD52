@@ -8,7 +8,7 @@ public class SceneLoader : ManagedBehaviour
 
     private void Start()
     {
-        string scene = "Earth";
+        string scene = "Intro";
         switch (PlayerPrefs.GetInt(SceneLoader.SCENE_PLAYERPREF))
         {
             case 1:

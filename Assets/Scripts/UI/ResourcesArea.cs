@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ResourcesArea : ManagedBehaviour
 {
+    public Civilization civ;
     public Tooltip tooltip;
 
     [SerializeField]

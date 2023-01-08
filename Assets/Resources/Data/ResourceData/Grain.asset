@@ -19,3 +19,12 @@ MonoBehaviour:
   baseAmount: 0
   baseRate: 0
   baseMaximum: 20
+  reskins:
+  - civ: 2
+    displayName: Rice
+    sprite: {fileID: 1520508903, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+    color: {r: 0.4260591, g: 0.8301887, b: 0.511139, a: 1}
+  - civ: 3
+    displayName: Maize
+    sprite: {fileID: -1880666639, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+    color: {r: 1, g: 0.55825305, b: 0, a: 1}

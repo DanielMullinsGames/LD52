@@ -63,7 +63,7 @@ public class TechnologyData : ScriptableObject
     [BoxGroup("PreRequisites")]
     public List<TechnologyData> prerequisites = new List<TechnologyData>();
 
-    public string GetDescription()
+    public string GetDescription(CivType civ)
     {
         string genericDescription = "";
 
@@ -71,15 +71,19 @@ public class TechnologyData : ScriptableObject
         {
             genericDescription += $"Unlocks the \"{policyUnlock.displayName.ToUpper()}\" Decree.";
         }
-        if (resourceMaxModification > 0f)
+        if (resourceModification != ResourceType.None)
         {
-            genericDescription += ResourceData.ColorFormattedString($"Increases maximum {resourceModification} storage.");
-        }
-        if (resourceRateModification > 0f)
-        {
-            genericDescription += ResourceData.ColorFormattedString($"Increases {resourceModification} by {resourceRateModification.ToString("0.0")} per second.");
+            string resourceString = ResourceData.ColorFormattedString(resourceModification.ToString(), civ);
+            if (resourceMaxModification > 0f)
+            {
+                genericDescription += ResourceData.ColorFormattedString($"Increases maximum {resourceString} storage.", civ);
+            }
+            if (resourceRateModification > 0f)
+            {
+                genericDescription += ResourceData.ColorFormattedString($"Increases {resourceString} by {resourceRateModification.ToString("0.0")} per second.", civ);
+            }
         }
 
-        return genericDescription + ResourceData.ColorFormattedString(specialDescription);
+        return genericDescription + ResourceData.ColorFormattedString(specialDescription, civ);
     }
 }

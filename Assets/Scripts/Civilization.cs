@@ -5,6 +5,8 @@ using Sirenix.OdinInspector;
 
 public class Civilization : ManagedBehaviour
 {
+    public CivType type;
+
     public ResourcesArea Resources => resources;
     [SerializeField]
     private ResourcesArea resources;

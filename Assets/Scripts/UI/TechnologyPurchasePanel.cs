@@ -24,9 +24,9 @@ public class TechnologyPurchasePanel : TechnologyPanel
             costTexts[i].SetText(data.costAmounts[i].ToString());
 
             var resourceData = GameDataReferences.GetResourceData(data.costTypes[i]);
-            costIcons[i].color = resourceData.color;
-            costTexts[i].SetColor(resourceData.color);
-            costIcons[i].sprite = resourceData.sprite;
+            costIcons[i].color = resourceData.GetSkinnedColor(area.civ.type);
+            costTexts[i].SetColor(resourceData.GetSkinnedColor(area.civ.type));
+            costIcons[i].sprite = resourceData.GetSkinnedIcon(area.civ.type);
         }
     }
 }

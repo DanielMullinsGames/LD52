@@ -9,8 +9,7 @@ public class TechnologyArea : ManagedBehaviour
     private List<TechnologyData> learnedTech = new List<TechnologyData>();
     private List<TechnologyData> availableTech = new List<TechnologyData>();
 
-    [SerializeField]
-    private Civilization civ;
+    public Civilization civ;
 
     [SerializeField]
     private TechnologyActivationManager activationManager;

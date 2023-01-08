@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ResourcePanel : InteractablePanel
 {
     protected override Tooltip Tooltip => area.tooltip;
-    protected override string TooltipTitle => ColorUtils.ColorString(Data.displayName.ToUpper(), Data.color);
+    protected override string TooltipTitle => ColorUtils.ColorString(Data.GetSkinnedName(area.civ.type).ToUpper(), Data.GetSkinnedColor(area.civ.type));
     protected override string TooltipDescription => "";
 
     public ResourceData Data { get; private set; }
@@ -43,11 +43,11 @@ public class ResourcePanel : InteractablePanel
         Maximum = data.baseMaximum;
         Rate = data.baseRate;
 
-        iconRenderer.color = barRenderer.color = data.color;
-        nameText.SetColor(data.color);
+        iconRenderer.color = barRenderer.color = Data.GetSkinnedColor(area.civ.type);
+        nameText.SetColor(Data.GetSkinnedColor(area.civ.type));
 
-        nameText.SetText(data.displayName);
-        iconRenderer.sprite = data.sprite;
+        nameText.SetText(Data.GetSkinnedName(area.civ.type));
+        iconRenderer.sprite = Data.GetSkinnedIcon(area.civ.type);
         UpdateDisplay();
     }
 
@@ -64,7 +64,7 @@ public class ResourcePanel : InteractablePanel
 
     private void UpdateDisplay()
     {
-        string amountString = ColorUtils.ColorString(Amount.ToString("0.0"), Data.color);
+        string amountString = ColorUtils.ColorString(Amount.ToString("0.0"), Data.GetSkinnedColor(area.civ.type));
         amountText.SetText($"{amountString}/{Maximum.ToString("0")}");
         rateText.SetText($"{Rate.ToString("0.0")}/s");
         barRenderer.transform.localScale = new Vector2(Mathf.Lerp(0f, maxBarLength, Amount / Maximum), barRenderer.transform.localScale.y);

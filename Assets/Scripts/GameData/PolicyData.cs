@@ -41,7 +41,7 @@ public class PolicyData : ScriptableObject
     [BoxGroup("Effects"), ShowIf("@resourceModification != ResourceType.None")]
     public float resourceRateModification;
 
-    public string GetDescription()
+    public string GetDescription(CivType civ)
     {
         string costString = "";
 
@@ -53,7 +53,7 @@ public class PolicyData : ScriptableObject
         for (int i = 0; i < costTypes.Count; i++)
         {
             costString += costAmounts[i].ToString() + " ";
-            costString += GameDataReferences.GetResourceData(costTypes[i]).GetColoredString();
+            costString += GameDataReferences.GetResourceData(costTypes[i]).GetColoredString(civ);
 
             if (i != costTypes.Count - 1)
             {
@@ -78,6 +78,6 @@ public class PolicyData : ScriptableObject
             }
         }
 
-        return costString + ResourceData.ColorFormattedString(effectString + description);
+        return costString + ResourceData.ColorFormattedString(effectString + description, civ);
     }
 }

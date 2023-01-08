@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CivType
+{
+    None,
+    Nile,
+    Yangtze,
+    Zana,
+}
+
 public class CivilizationManager : Singleton<CivilizationManager>
 {
     public List<Civilization> startingCivs = new List<Civilization>();

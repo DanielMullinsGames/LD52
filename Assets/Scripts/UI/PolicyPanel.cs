@@ -7,7 +7,7 @@ public class PolicyPanel : InteractablePanel
 {
     protected override Tooltip Tooltip => civ.Policies.tooltip;
     protected override string TooltipTitle => Data.displayName;
-    protected override string TooltipDescription => Data.GetDescription();
+    protected override string TooltipDescription => Data.GetDescription(civ.type);
 
     public System.Action<PolicyPanel> Activated;
     public PolicyData Data { get; private set; }

@@ -888,6 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b08ec4af229e5448942259b1487ca5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   resources: {fileID: 7982744973791675749}
   policies: {fileID: 7982744973574966794}
   technologies: {fileID: 7982744973897882659}
@@ -1200,6 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71979e80feeb96b4ebd0431e2c9d9542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  civ: {fileID: 7982744973631635838}
   tooltip: {fileID: 4439689945288599107}
   resourcePanelPrefab: {fileID: 8461090277774643989, guid: 90ed67031e2339a4bad2c52e939f2037, type: 3}
   panelsSpacing: 0.21
@@ -7268,6 +7270,10 @@ PrefabInstance:
     - target: {fileID: 6309929657493769893, guid: 400a11df118ae2f45ab5733690eedeb5, type: 3}
       propertyPath: m_Name
       value: Tile (4,3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309929657493769893, guid: 400a11df118ae2f45ab5733690eedeb5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6309929657493769894, guid: 400a11df118ae2f45ab5733690eedeb5, type: 3}
       propertyPath: m_RootOrder

@@ -22,5 +22,5 @@ MonoBehaviour:
   costAmounts:
   - 10
   resourceModification: 3
-  resourceAmountModification: 50
+  resourceAmountModification: 30
   resourceRateModification: 0

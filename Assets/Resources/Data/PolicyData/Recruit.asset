@@ -21,6 +21,7 @@ MonoBehaviour:
   costTypes: 0200000004000000
   costAmounts:
   - 20
+  - 20
   resourceModification: 5
   resourceAmountModification: 20
   resourceRateModification: 0

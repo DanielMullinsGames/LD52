@@ -16,6 +16,7 @@ MonoBehaviour:
   displayName: People
   color: {r: 0.6415094, g: 0.5684266, b: 0.5168387, a: 1}
   sprite: {fileID: 1391153843, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
-  baseAmount: 10
+  baseAmount: 5
   baseRate: 1
   baseMaximum: 20
+  reskins: []

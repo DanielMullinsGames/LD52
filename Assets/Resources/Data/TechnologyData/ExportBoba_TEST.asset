@@ -24,4 +24,4 @@ MonoBehaviour:
   resourceMaxModification: 0
   resourceRateModification: 0
   prerequisites: []
-  civPrereq: 0
+  civPrereq: 4

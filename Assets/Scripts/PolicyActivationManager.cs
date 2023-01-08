@@ -39,6 +39,12 @@ public class PolicyActivationManager : ManagedBehaviour
             case PolicyType.BuildSchool:
                 civ.AddImprovement(TileImprovementType.School);
                 break;
+            case PolicyType.War:
+                civ.Resources.GetOrCreateResource(ResourceType.Money).Rate += 1;
+                civ.Resources.GetOrCreateResource(ResourceType.Money).Amount += 50;
+                civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Rate += 1;
+                civ.Resources.GetOrCreateResource(ResourceType.Knowledge).Amount += 25;
+                break;
         }
     }
 }

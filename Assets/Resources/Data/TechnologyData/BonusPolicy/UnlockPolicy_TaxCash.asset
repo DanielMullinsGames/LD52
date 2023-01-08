@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: Faith_Rate_1
+  m_Name: UnlockPolicy_TaxCash
   m_EditorClassIdentifier: 
-  technologyType: 9
-  displayName: Monotheism
+  technologyType: 35
+  displayName: Advanced Taxation
   specialDescription: 
   icon: {fileID: 0}
-  costTypes: 0200000003000000
+  costTypes: 05000000
   costAmounts:
-  - 1
-  - 20
-  policyUnlock: {fileID: 0}
-  resourceModification: 3
+  - 50
+  policyUnlock: {fileID: 11400000, guid: be2985428851fa54499cdf48a2c01afd, type: 2}
+  resourceModification: 0
   resourceMaxModification: 0
-  resourceRateModification: 1
+  resourceRateModification: 0
   prerequisites:
-  - {fileID: 11400000, guid: cdb94639205e4ba44b8bf5cbcfdc47ca, type: 2}
+  - {fileID: 11400000, guid: 67c98aaa8dee4144497491e38167ba99, type: 2}
+  - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
   civPrereq: 0

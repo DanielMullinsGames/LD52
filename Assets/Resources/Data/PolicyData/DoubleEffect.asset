@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   policyType: 6
   displayName: Jubilee
-  description: the next Decree happens a 2nd time for free.
+  description: the next Decree to happen a 2nd time for free.
   icon: {fileID: 1821470248, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
   greyScaleIcon: {fileID: -746972066, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
   baseCooldown: 10
   costTypes: 04000000
   costAmounts:
   - 50
+  resourceModification: 0
+  resourceAmountModification: 0
+  resourceRateModification: 0

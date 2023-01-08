@@ -37,6 +37,12 @@ public enum TechnologyType
     PeopleRate2,
     ExportBoba,
     ExportTest,
+    UnlockBoba,
+    UnlockPolicyDouble,
+    UnlockPolicySacrifice,
+    UnlockPolicyTaxCash,
+    UnlockPolicyTaxKind,
+    UnlockPolicyWar,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]

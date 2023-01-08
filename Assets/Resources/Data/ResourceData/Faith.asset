@@ -19,4 +19,8 @@ MonoBehaviour:
   baseAmount: 0
   baseRate: 0
   baseMaximum: 25
-  reskins: []
+  reskins:
+  - civ: 5
+    displayName: ....
+    sprite: {fileID: 1229640909, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
+    color: {r: 0.62185335, g: 0, b: 1, a: 1}

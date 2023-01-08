@@ -799,6 +799,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8461090277774643988}
     m_Modifications:
+    - target: {fileID: 2939906373240462115, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
+      propertyPath: doNotModifyForPlanet
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6738841716622713136, guid: dfcd4641add904d4c8a7fffba96ada7e, type: 3}
       propertyPath: m_Name
       value: Amount

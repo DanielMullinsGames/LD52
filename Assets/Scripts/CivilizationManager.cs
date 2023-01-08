@@ -9,6 +9,8 @@ public enum CivType
     Yangtze,
     Zana,
     Planet,
+    Robo,
+    Lava,
 }
 
 public class CivilizationManager : Singleton<CivilizationManager>

@@ -1060,7 +1060,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.2833333
+  - time: 0.53333336
     functionName: ChangeSortLayerKeyframe
     data: 
     objectReferenceParameter: {fileID: 0}

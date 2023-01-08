@@ -69,7 +69,7 @@ public class PolicyPanel : InteractablePanel
 
     public void TickCooldown(float timeStep)
     {
-        cooldownTimer -= Time.deltaTime;
+        cooldownTimer -= timeStep;
         UpdateDisplay();
     }
 

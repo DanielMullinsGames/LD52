@@ -6,6 +6,10 @@ using Sirenix.OdinInspector;
 public class Civilization : ManagedBehaviour
 {
     public CivType type;
+    public bool isEarth;
+
+    public float resourceRateMultiplier = 1f;
+    public float cooldownMultiplier = 1f;
 
     public ResourcesArea Resources => resources;
     [SerializeField]
@@ -52,6 +56,11 @@ public class Civilization : ManagedBehaviour
         if (type == CivType.Planet)
         {
             resources.AddResourcePanel(ResourceType.Boba);
+
+            if (isEarth)
+            {
+                resources.GetResource(ResourceType.Boba).Rate += 0.1f;
+            }
         }
         else 
         {
@@ -66,8 +75,8 @@ public class Civilization : ManagedBehaviour
 
     public void Tick(float timeStep)
     {
-        resources.TickResources(timeStep);
-        policies.TickCooldowns(timeStep);
+        resources.TickResources(timeStep * resourceRateMultiplier);
+        policies.TickCooldowns(timeStep * cooldownMultiplier);
         rulerView.TickAge(timeStep);
     }
 }

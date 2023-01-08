@@ -5222,6 +5222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: cooldownMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: resourceRateMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8584563854511141468, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
       propertyPath: planetCiv
       value: 
@@ -5337,6 +5345,10 @@ PrefabInstance:
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: isPlanet
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: resourceRateMultiplier
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973687897345, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: m_IsActive
@@ -5463,6 +5475,14 @@ PrefabInstance:
     - target: {fileID: 8584563853703376653, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: cooldownMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: resourceRateMultiplier
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8584563854511141468, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
       propertyPath: planetCiv
@@ -5761,6 +5781,14 @@ PrefabInstance:
     - target: {fileID: 8584563853703376653, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: cooldownMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584563853703376654, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
+      propertyPath: resourceRateMultiplier
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8584563854511141468, guid: 6d8b5c63b30b7814a893b010ce9f7a7f, type: 3}
       propertyPath: planetCiv

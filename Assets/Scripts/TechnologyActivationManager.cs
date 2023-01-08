@@ -45,7 +45,7 @@ public class TechnologyActivationManager : ManagedBehaviour
                 civ.bobaTileAnim.StartHarvest();
                 if (civ.type != CivType.Nile && planetCiv != null)
                 {
-                    planetCiv.Resources.GetResource(ResourceType.Boba).Amount += 0.1f;
+                    planetCiv.Resources.GetResource(ResourceType.Boba).Rate += 0.1f;
                 }
                 break;
             default:

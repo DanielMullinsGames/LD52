@@ -43,6 +43,7 @@ public enum TechnologyType
     UnlockPolicyTaxCash,
     UnlockPolicyTaxKind,
     UnlockPolicyWar,
+    UnlockPolicySlavery,
 }
 
 [CreateAssetMenu(fileName = "TechnologyData", menuName = "LD52/TechnologyData")]

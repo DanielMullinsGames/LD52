@@ -280,7 +280,7 @@ TextureImporter:
         width: 18
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,7 +301,7 @@ TextureImporter:
         width: 18
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,6 +309,27 @@ TextureImporter:
       bones: []
       spriteID: ebb4d993ec419ed478cdbda1215d9307
       internalID: -1520288239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policy_sprites_greyscale_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 76
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ac0eacc3c42ff4bb0f453f9ae63b1f
+      internalID: 2145732871
       vertices: []
       indices: 
       edges: []
@@ -330,6 +351,7 @@ TextureImporter:
       policy_sprites_greyscale_9: -1520288239
       policy_sprites_greyscale_6: 310203892
       policy_sprites_greyscale_2: 791737504
+      policy_sprites_greyscale_10: 2145732871
       policy_sprites_greyscale_0: -740946273
       policy_sprites_greyscale_7: -702791236
       policy_sprites_greyscale_5: -2081745599

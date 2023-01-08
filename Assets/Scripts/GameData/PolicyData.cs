@@ -16,6 +16,7 @@ public enum PolicyType
     War,
     Recruit,
     Trade,
+    Slavery,
 }
 
 [CreateAssetMenu(fileName = "PolicyData", menuName = "LD52/PolicyData")]

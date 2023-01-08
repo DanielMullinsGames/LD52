@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: UnlockPolicy_War
+  m_Name: UnlockPolicy_Slaves
   m_EditorClassIdentifier: 
   technologyType: 37
-  displayName: Warfare
+  displayName: Slavery
   specialDescription: 
   icon: {fileID: 0}
   costTypes: 05000000
   costAmounts:
-  - 50
-  policyUnlock: {fileID: 11400000, guid: 6f8ede5b860ccf94597eafff4544c81e, type: 2}
+  - 10
+  policyUnlock: {fileID: 11400000, guid: d14bd1f82eafafc4095c24710edc8ca2, type: 2}
   resourceModification: 0
   resourceMaxModification: 0
   resourceRateModification: 0
   prerequisites:
   - {fileID: 11400000, guid: 67c98aaa8dee4144497491e38167ba99, type: 2}
-  civPrereq: 3
+  - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
+  civPrereq: 0

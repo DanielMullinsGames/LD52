@@ -27,4 +27,6 @@ MonoBehaviour:
   resourceRateModification: 0
   prerequisites:
   - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
+  - {fileID: 11400000, guid: 7b68685fb50b5c34b8dedd51154cf4b1, type: 2}
+  - {fileID: 11400000, guid: 21c856f30c7802f4dbf516c3a23ffd8c, type: 2}
   civPrereq: 0

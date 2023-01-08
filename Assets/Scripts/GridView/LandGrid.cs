@@ -21,6 +21,7 @@ public class LandGrid : ManagedBehaviour
     private const int GRID_SIZE_X = 9;
     private const int GRID_SIZE_Y = 7;
 
+#if UNITY_EDITOR
     [Button("Generate Grid")]
     public void GenerateGrid()
     {
@@ -41,6 +42,7 @@ public class LandGrid : ManagedBehaviour
             }
         }
     }
+#endif
 
     public void AddImprovementToRandomTile(TileImprovementType improvementType)
     {

@@ -6287,6 +6287,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: isEarth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7982744973631635838, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: isPlanet
       value: 1
       objectReference: {fileID: 0}

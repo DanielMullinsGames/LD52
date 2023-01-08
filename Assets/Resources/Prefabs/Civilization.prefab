@@ -890,6 +890,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isEarth: 0
+  resourceRateMultiplier: 1
+  cooldownMultiplier: 1
   resources: {fileID: 7982744973791675749}
   policies: {fileID: 7982744973574966794}
   technologies: {fileID: 7982744973897882659}
@@ -1284,6 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada0ecd7703a09f4ebe6409af9b181ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetCiv: {fileID: 0}
   civ: {fileID: 7982744973631635838}
 --- !u!1 &7982744974020212023
 GameObject:
@@ -2018,6 +2022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud_Small
       objectReference: {fileID: 0}
+    - target: {fileID: 8315786602894733102, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8315786602894733103, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2703,6 +2711,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7982744974085084048}
     m_Modifications:
+    - target: {fileID: 2585402912571320760, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2585402912571320761, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3883,6 +3895,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7982744974085084048}
     m_Modifications:
+    - target: {fileID: 2585402912571320760, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2585402912571320761, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4272,6 +4288,10 @@ PrefabInstance:
     - target: {fileID: 8315786602894733100, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
       propertyPath: m_Name
       value: Cloud_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315786602894733102, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8315786602894733103, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
       propertyPath: m_RootOrder
@@ -4785,6 +4805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7982744974085084048}
     m_Modifications:
+    - target: {fileID: 2585402912571320760, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2585402912571320761, guid: 16390dd2f8588a64e898000bbfbeb06c, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5587,6 +5611,10 @@ PrefabInstance:
     - target: {fileID: 8315786602894733100, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
       propertyPath: m_Name
       value: Cloud_Small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315786602894733102, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8315786602894733103, guid: 0012711ca7003a547b209421ce8770e8, type: 3}
       propertyPath: m_RootOrder

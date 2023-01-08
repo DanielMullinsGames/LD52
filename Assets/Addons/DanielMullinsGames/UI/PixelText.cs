@@ -8,6 +8,8 @@ public class PixelText : MonoBehaviour
 {
     public System.Action<string> TextChanged;
 
+    public Color Color => UIText.color;
+
     public string Text => UIText.text;
     public Text UIText => uiText;
     [SerializeField]

@@ -34,7 +34,7 @@ public class PoliciesArea : ManagedBehaviour
     {
         var data = GameDataReferences.GetPolicyData(type);
 
-        var panelObj = Instantiate(policyPanelPrefab);
+        var panelObj = Instantiate(policyPanelPrefab, transform);
 
         Vector2 pos = panelsAnchor.position + Vector3.right * panelsSpacing * panels.Count;
         panelObj.transform.position = pos + Vector2.down * 1f;

@@ -64,9 +64,8 @@ public class Civilization : ManagedBehaviour
         landGrid.AddImprovementToRandomTile(improvementType);
     }
 
-    public override void ManagedUpdate()
+    public void Tick(float timeStep)
     {
-        float timeStep = Time.deltaTime;
         resources.TickResources(timeStep);
         policies.TickCooldowns(timeStep);
         rulerView.TickAge(timeStep);

@@ -54,7 +54,7 @@ public class ResourcesArea : ManagedBehaviour
 
     public ResourcePanel AddResourcePanel(ResourceType resourceType)
     {
-        var panelObj = Instantiate(resourcePanelPrefab);
+        var panelObj = Instantiate(resourcePanelPrefab, transform);
         panelObj.transform.position = panelsAnchor.position + Vector3.down * panelsSpacing * panels.Count;
 
         var panel = panelObj.GetComponent<ResourcePanel>();

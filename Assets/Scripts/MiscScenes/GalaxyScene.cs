@@ -68,6 +68,7 @@ public class GalaxyScene : TimedBehaviour
 
     private IEnumerator Finale()
     {
+        AudioController.Instance.PlaySound2D("rumble");
         StartCoroutine(IncreasingShake(12f));
         yield return new WaitForSeconds(5f);
 
@@ -77,6 +78,8 @@ public class GalaxyScene : TimedBehaviour
 
         Tween.Position(straw, pos, 5f, 0f, Tween.EaseLinear);
         yield return new WaitForSeconds(5f);
+        var clip = AudioController.Instance.PlaySound2D("drink");
+        DontDestroyOnLoad(clip.gameObject);
 
         //play sound
         foreach (var boba in allBobas)

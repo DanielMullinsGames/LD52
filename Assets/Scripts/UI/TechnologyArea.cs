@@ -47,6 +47,11 @@ public class TechnologyArea : ManagedBehaviour
         UpdateAvailableTech();
     }
 
+    public bool Learned(TechnologyType type)
+    {
+        return learnedTech.Exists(x => x.technologyType == type);
+    }
+
     public TechnologyPurchasePanel AddTechnologyToAvailable(TechnologyType techType)
     {
         var panelObj = Instantiate(availablePanelPrefab, availableTechnogiesParent);
@@ -86,7 +91,7 @@ public class TechnologyArea : ManagedBehaviour
         var allTech = GameDataReferences.GetAllTechnology();
         foreach (var tech in allTech)
         {
-            if (!availableTech.Contains(tech) && !learnedTech.Contains(tech) && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
+            if (availableTech.Count < 7 && !availableTech.Contains(tech) && !learnedTech.Contains(tech) && !tech.prerequisites.Exists(x => !learnedTech.Contains(x)))
             {
                 availableTech.Add(tech);
                 AddTechnologyToAvailable(tech.technologyType);

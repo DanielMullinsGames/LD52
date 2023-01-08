@@ -80,6 +80,6 @@ public class TechnologyData : ScriptableObject
             genericDescription += ResourceData.ColorFormattedString($"Increases {resourceModification} by {resourceRateModification.ToString("0.0")} per second.");
         }
 
-        return genericDescription + specialDescription;
+        return genericDescription + ResourceData.ColorFormattedString(specialDescription);
     }
 }

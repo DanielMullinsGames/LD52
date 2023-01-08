@@ -30,6 +30,9 @@ public class TechnologyActivationManager : ManagedBehaviour
         // Special effects
         switch (panel.Data.technologyType)
         {
+            case TechnologyType.GrainRate1:
+                civ.Resources.GetOrCreateResource(ResourceType.Grain).Rate += civ.Grid.GetNumImprovementsOfType(TileImprovementType.Farm) * 0.1f;
+                break;
             default:
                 break;
         }

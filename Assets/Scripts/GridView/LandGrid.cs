@@ -47,4 +47,9 @@ public class LandGrid : ManagedBehaviour
         var openTiles = tiles.FindAll(x => x.gameObject.activeSelf && x.Improvement == TileImprovementType.None);
         openTiles[Random.Range(0, openTiles.Count)].AddImprovement(improvementType);
     }
+
+    public int GetNumImprovementsOfType(TileImprovementType improvement)
+    {
+        return tiles.FindAll(x => x.Improvement == improvement).Count;
+    }
 }

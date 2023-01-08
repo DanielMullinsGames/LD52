@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
-  m_Name: Unlock_Religion
+  m_Name: Faith_Rate_1
   m_EditorClassIdentifier: 
-  technologyType: 6
-  displayName: Religion
+  technologyType: 9
+  displayName: Monotheism
   specialDescription: 
   icon: {fileID: 0}
-  costTypes: 0200000001000000
+  costTypes: 0200000003000000
   costAmounts:
-  - 15
-  - 10
-  policyUnlock: {fileID: 11400000, guid: af22e93d43ee78a4d98ead23b124f2cc, type: 2}
-  resourceModification: 0
+  - 1
+  - 30
+  policyUnlock: {fileID: 0}
+  resourceModification: 3
   resourceMaxModification: 0
-  resourceRateModification: 0
+  resourceRateModification: 1
   prerequisites:
-  - {fileID: 11400000, guid: 7c0d0c077752f91428538ed63fa47345, type: 2}
+  - {fileID: 11400000, guid: cdb94639205e4ba44b8bf5cbcfdc47ca, type: 2}

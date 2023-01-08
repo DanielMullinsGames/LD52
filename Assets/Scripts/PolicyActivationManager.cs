@@ -27,6 +27,11 @@ public class PolicyActivationManager : ManagedBehaviour
         {
             case PolicyType.BuildFarm:
                 civ.AddImprovement(TileImprovementType.Farm);
+
+                if (civ.Technologies.Learned(TechnologyType.GrainRate1))
+                {
+                    civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
+                }
                 break;
         }
     }

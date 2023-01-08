@@ -18,4 +18,4 @@ MonoBehaviour:
   sprite: {fileID: -958606076, guid: 7b39840477834cc4181e9c10c7df1537, type: 3}
   baseAmount: 0
   baseRate: 0
-  baseMaximum: 100
+  baseMaximum: 50

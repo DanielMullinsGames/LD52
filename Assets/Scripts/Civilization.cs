@@ -17,6 +17,7 @@ public class Civilization : ManagedBehaviour
     [SerializeField]
     private TechnologyArea technologies;
 
+    public LandGrid Grid => landGrid;
     [SerializeField]
     private LandGrid landGrid;
 

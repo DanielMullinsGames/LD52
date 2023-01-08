@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
+  m_Name: Money_Rate_2
+  m_EditorClassIdentifier: 
+  technologyType: 19
+  displayName: Corporations
+  specialDescription: 
+  icon: {fileID: 0}
+  costTypes: 020000000500000004000000
+  costAmounts:
+  - 10
+  - 60
+  - 100
+  policyUnlock: {fileID: 0}
+  resourceModification: 4
+  resourceMaxModification: 0
+  resourceRateModification: 0.2
+  prerequisites:
+  - {fileID: 11400000, guid: 9aa0c4dce111abf45ac362e5796a1c2a, type: 2}
+  civPrereq: 0

@@ -5592,6 +5592,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.26415092
       objectReference: {fileID: 0}
+    - target: {fileID: 7982744973897882668, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: planetCiv
+      value: 
+      objectReference: {fileID: 1485644414}
     - target: {fileID: 7982744974186363687, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6177,6 +6181,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.13426487
       objectReference: {fileID: 0}
+    - target: {fileID: 7982744973897882668, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: planetCiv
+      value: 
+      objectReference: {fileID: 1485644414}
     - target: {fileID: 7982744974186363687, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6529,5 +6537,9 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7982744973897882668, guid: 027583db5d623a5429749f42647d3c9e, type: 3}
+      propertyPath: planetCiv
+      value: 
+      objectReference: {fileID: 1485644414}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 027583db5d623a5429749f42647d3c9e, type: 3}

@@ -34,6 +34,7 @@ public class CivilizationManager : Singleton<CivilizationManager>
     private bool debugUnlockCivs;
 
     private CivTab currentTab;
+    private bool didUnlock;
 
     private void Start()
     {
@@ -50,11 +51,16 @@ public class CivilizationManager : Singleton<CivilizationManager>
 
     public void UnlockAll()
     {
-        singleCivParent.gameObject.SetActive(false);
-        tabsParent.gameObject.SetActive(true);
+        if (!didUnlock && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Earth")
+        {
+            singleCivParent.gameObject.SetActive(false);
+            tabsParent.gameObject.SetActive(true);
 
-        currentCivs.AddRange(unlockedCivs);
-        OnTabClicked(tabs[0]);
+            currentCivs.AddRange(unlockedCivs);
+            OnTabClicked(tabs[0]);
+
+            didUnlock = true;
+        }
     }
 
     public override void ManagedUpdate()

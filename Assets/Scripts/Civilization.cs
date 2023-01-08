@@ -38,6 +38,8 @@ public class Civilization : ManagedBehaviour
     [FoldoutGroup("Debug"), SerializeField]
     private List<TechnologyType> debugAddLearnedTech;
 
+    public BobaMiningAnim bobaTileAnim;
+
     private void Start()
     {
 #if UNITY_EDITOR

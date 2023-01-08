@@ -398,6 +398,7 @@ Transform:
   - {fileID: 7982744973256411610}
   - {fileID: 7982744974085084048}
   - {fileID: 7982744974251563696}
+  - {fileID: 7047497960434487166}
   m_Father: {fileID: 7982744973631635837}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -894,11 +895,11 @@ MonoBehaviour:
   technologies: {fileID: 7982744973897882659}
   landGrid: {fileID: 7982744974251563697}
   rulerView: {fileID: 3030085241446309479}
-  isPlanet: 0
   debugAddResources: 
   debugAddPolicies: 
   debugAddAvailableTech: 
   debugAddLearnedTech: 
+  bobaTileAnim: {fileID: 3335271413789366934}
 --- !u!1 &7982744973687897345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1408,6 @@ Transform:
   - {fileID: 2139196186980887134}
   - {fileID: 2139196186623139483}
   - {fileID: 5560074179967991122}
-  - {fileID: 7047497960434487166}
   m_Father: {fileID: 7982744973226875503}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2237,15 +2237,19 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7982744974085084048}
+    m_TransformParent: {fileID: 7982744973226875503}
     m_Modifications:
+    - target: {fileID: 121829153287463972, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
+      propertyPath: civ
+      value: 
+      objectReference: {fileID: 7982744973631635838}
     - target: {fileID: 1713120880212021131, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
       propertyPath: m_Name
       value: BobaTile
       objectReference: {fileID: 0}
     - target: {fileID: 5635181090402382284, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5635181090402382284, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2253,7 +2257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5635181090402382284, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72999996
+      value: -0.004999995
       objectReference: {fileID: 0}
     - target: {fileID: 5635181090402382284, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2289,6 +2293,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
+--- !u!114 &3335271413789366934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 121829153287463972, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}
+  m_PrefabInstance: {fileID: 3456953988150361778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae857c2aa7c6e34dbe6317d4d3e2c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7047497960434487166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635181090402382284, guid: b361480652faf434eac6a1ac10ce99c8, type: 3}

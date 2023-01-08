@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Unlock_Boba
   m_EditorClassIdentifier: 
   technologyType: 32
-  displayName: Mining
-  specialDescription: Begin mining Boba.
+  displayName: Harvest
+  specialDescription: Begin harvesting Boba.
   icon: {fileID: 0}
   costTypes: 0600000005000000
   costAmounts:

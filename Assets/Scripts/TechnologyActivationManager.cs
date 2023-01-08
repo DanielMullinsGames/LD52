@@ -5,6 +5,9 @@ using UnityEngine;
 public class TechnologyActivationManager : ManagedBehaviour
 {
     [SerializeField]
+    private Civilization planetCiv = default;
+
+    [SerializeField]
     private Civilization civ = default;
 
     public void ActivateTech(TechnologyPurchasePanel panel)
@@ -37,6 +40,13 @@ public class TechnologyActivationManager : ManagedBehaviour
             case TechnologyType.ExportBoba:
                 PlayerCursor.instance.DisableInput.Add(this);
                 StartCoroutine(ExportSequence());
+                break;
+            case TechnologyType.UnlockBoba:
+                civ.bobaTileAnim.StartHarvest();
+                if (civ.type != CivType.Nile && planetCiv != null)
+                {
+                    planetCiv.Resources.GetResource(ResourceType.Boba).Amount += 0.1f;
+                }
                 break;
             default:
                 break;

@@ -76,6 +76,7 @@ public class TechnologyArea : ManagedBehaviour
         learnedPanels.Add(panel);
 
         UpdatePanelPositions();
+
         return panel;
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pixelplacement;
 
 public class TechnologyPurchasePanel : TechnologyPanel
 {
@@ -30,5 +31,8 @@ public class TechnologyPurchasePanel : TechnologyPanel
             costTexts[i].SetColor(resourceData.GetSkinnedColor(area.civ.type));
             costIcons[i].sprite = resourceData.GetSkinnedIcon(area.civ.type);
         }
+
+        anim.transform.localPosition += Vector3.right;
+        Tween.LocalPosition(anim.transform, Vector3.zero, 0.25f, 0f, Tween.EaseOutStrong);
     }
 }

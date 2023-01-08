@@ -17,7 +17,7 @@ MonoBehaviour:
   description: 
   icon: {fileID: 324902427, guid: d407d71c35fc9d64dbc221e6e92c5f6e, type: 3}
   greyScaleIcon: {fileID: -1924329830, guid: 0fc099d2751efe94dad27111ff4a4e9d, type: 3}
-  baseCooldown: 10
+  baseCooldown: 1
   costTypes: 05000000
   costAmounts:
   - 5

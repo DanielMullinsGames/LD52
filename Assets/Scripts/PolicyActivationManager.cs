@@ -33,6 +33,12 @@ public class PolicyActivationManager : ManagedBehaviour
                     civ.Resources.GetOrCreateResource(panel.Data.resourceModification).Rate += panel.Data.resourceRateModification;
                 }
                 break;
+            case PolicyType.BuildChurch:
+                civ.AddImprovement(TileImprovementType.Church);
+                break;
+            case PolicyType.BuildSchool:
+                civ.AddImprovement(TileImprovementType.School);
+                break;
         }
     }
 }

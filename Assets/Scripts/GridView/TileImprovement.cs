@@ -6,6 +6,8 @@ public enum TileImprovementType
 {
     None,
     Farm,
+    Church,
+    School,
 }
 
 public class TileImprovement : ManagedBehaviour

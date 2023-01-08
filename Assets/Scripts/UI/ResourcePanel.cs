@@ -73,6 +73,7 @@ public class ResourcePanel : InteractablePanel
         Tween.Shake(anim, Vector2.zero, new Vector2(0.02f, 0.02f), 0.25f, 0f);
     }
 
+    /*
     public override void ManagedUpdate()
     {
         int thisFrameAmount = Mathf.FloorToInt(Amount);
@@ -82,6 +83,7 @@ public class ResourcePanel : InteractablePanel
         }
         lastFrameAmount = thisFrameAmount;
     }
+    */
 
     public void ShowGain(float amount)
     {

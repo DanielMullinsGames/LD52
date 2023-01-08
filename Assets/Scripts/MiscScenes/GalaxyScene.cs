@@ -59,6 +59,15 @@ public class GalaxyScene : TimedBehaviour
         if (boba < bobaGroups.Count)
         {
             bobaGroups[boba].SetActive(true);
+            foreach (Transform t in bobaGroups[boba].GetComponentsInChildren<Transform>())
+            {
+                if (t != bobaGroups[boba].transform)
+                {
+                    var scale = t.localScale;
+                    t.localScale = Vector2.zero;
+                    Tween.LocalScale(t, scale, 0.2f, 0f, Tween.EaseOut);
+                }
+            }
         }
 
         boba++;

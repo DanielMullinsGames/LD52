@@ -14,7 +14,7 @@ public class BobaMiningAnim : ManagedBehaviour
     {
         GetComponent<Animator>().Play("harvest", 0, 0f);
 
-        if (AudioController.Instance.BaseLoopSource.clip.name == "nile")
+        if (AudioController.Instance.BaseLoopSource.clip != null && AudioController.Instance.BaseLoopSource.clip.name == "nile")
         {
             AudioController.Instance.FadeOutLoop(2f);
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187fab7199f624d458c66781d84f4a76, type: 3}
   m_Name: Money_Storage_2
   m_EditorClassIdentifier: 
-  technologyType: 17
+  technologyType: 18
   displayName: Banking
   specialDescription: 
   icon: {fileID: 0}

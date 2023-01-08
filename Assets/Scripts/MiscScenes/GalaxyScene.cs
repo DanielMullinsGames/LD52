@@ -26,6 +26,9 @@ public class GalaxyScene : TimedBehaviour
     private void Start()
     {
         bobaGroups.ForEach(x => x.SetActive(false));
+
+        AudioController.Instance.PlaySound2D("milkyway_single");
+        CustomCoroutine.WaitThenExecute(25f, () => AudioController.Instance.SetLoopAndPlay("earth"));
     }
 
     protected override void OnTimerReached()

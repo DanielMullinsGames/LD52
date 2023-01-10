@@ -67,7 +67,8 @@ public class TechnologyActivationManager : ManagedBehaviour
 
     private IEnumerator ExportSequence()
     {
-        PlayerPrefs.SetInt("boba", 1);
+        int currentBoba = PlayerPrefs.GetInt("boba");
+        PlayerPrefs.SetInt("boba", currentBoba + 1);
 
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Earth")
         {

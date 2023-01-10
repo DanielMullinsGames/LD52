@@ -47,9 +47,13 @@ public class GalaxyScene : TimedBehaviour
 
     private void CheckForNewBoba()
     {
-        if (PlayerPrefs.GetInt("boba") > 0)
+        int bobaAmount = PlayerPrefs.GetInt("boba");
+        if (bobaAmount > 0)
         {
-            AddBoba();
+            for (int i = 0; i < bobaAmount; i++)
+            {
+                AddBoba();
+            }
             PlayerPrefs.SetInt("boba", 0);
         }
     }
